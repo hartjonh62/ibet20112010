@@ -1,0 +1,33 @@
+C:\Documents and Settings\Acer\Desktop\ThienNam\ThienNam\AGiBet\AGiBetWeb\bin\AGiBetWeb.dll
+C:\Documents and Settings\Acer\Desktop\ThienNam\ThienNam\AGiBet\AGiBetWeb\bin\AGiBetWeb.pdb
+C:\Documents and Settings\Acer\Desktop\ThienNam\ThienNam\AGiBet\AGiBetWeb\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Acer\Desktop\ThienNam\ThienNam\AGiBet\AGiBetWeb\obj\Debug\AGiBetWeb.dll
+C:\Documents and Settings\Acer\Desktop\ThienNam\ThienNam\AGiBet\AGiBetWeb\obj\Debug\AGiBetWeb.pdb
+C:\Documents and Settings\Acer\Desktop\ThienNam\ThienNam\AGiBet\AGiBetWeb\bin\AGiBetBusiness.dll
+C:\Documents and Settings\Acer\Desktop\ThienNam\ThienNam\AGiBet\AGiBetWeb\bin\AGiBetCommon.dll
+C:\Documents and Settings\Acer\Desktop\ThienNam\ThienNam\AGiBet\AGiBetWeb\bin\AGiBetDataAccess.dll
+C:\Documents and Settings\Acer\Desktop\ThienNam\ThienNam\AGiBet\AGiBetWeb\bin\AGiBetCommon.pdb
+C:\Documents and Settings\Acer\Desktop\ThienNam\ThienNam\AGiBet\AGiBetWeb\bin\AGiBetDataAccess.pdb
+C:\Documents and Settings\Acer\Desktop\ThienNam\ThienNam\AGiBet\AGiBetWeb\bin\AGiBetBusiness.pdb
+D:\ThienNam\AGiBet\AGiBetWeb\bin\AGiBetWeb.dll
+D:\ThienNam\AGiBet\AGiBetWeb\bin\AGiBetWeb.pdb
+D:\ThienNam\AGiBet\AGiBetWeb\bin\AGiBetBusiness.dll
+D:\ThienNam\AGiBet\AGiBetWeb\bin\AGiBetCommon.dll
+D:\ThienNam\AGiBet\AGiBetWeb\bin\AGiBetDataAccess.dll
+D:\ThienNam\AGiBet\AGiBetWeb\bin\AGiBetCommon.pdb
+D:\ThienNam\AGiBet\AGiBetWeb\bin\AGiBetDataAccess.pdb
+D:\ThienNam\AGiBet\AGiBetWeb\bin\AGiBetBusiness.pdb
+D:\ThienNam\AGiBet\AGiBetWeb\obj\Debug\ResolveAssemblyReference.cache
+D:\ThienNam\AGiBet\AGiBetWeb\obj\Debug\AGiBetWeb.dll
+D:\ThienNam\AGiBet\AGiBetWeb\obj\Debug\AGiBetWeb.pdb
+D:\Thien Nam\iBet\AGiBet\AGiBet\AGiBetWeb\bin\AGiBetWeb.dll
+D:\Thien Nam\iBet\AGiBet\AGiBet\AGiBetWeb\bin\AGiBetWeb.pdb
+D:\Thien Nam\iBet\AGiBet\AGiBet\AGiBetWeb\bin\AGiBetBusiness.dll
+D:\Thien Nam\iBet\AGiBet\AGiBet\AGiBetWeb\bin\AGiBetCommon.dll
+D:\Thien Nam\iBet\AGiBet\AGiBet\AGiBetWeb\bin\AGiBetDataAccess.dll
+D:\Thien Nam\iBet\AGiBet\AGiBet\AGiBetWeb\bin\AGiBetCommon.pdb
+D:\Thien Nam\iBet\AGiBet\AGiBet\AGiBetWeb\bin\AGiBetDataAccess.pdb
+D:\Thien Nam\iBet\AGiBet\AGiBet\AGiBetWeb\bin\AGiBetBusiness.pdb
+D:\Thien Nam\iBet\AGiBet\AGiBet\AGiBetWeb\obj\Debug\ResolveAssemblyReference.cache
+D:\Thien Nam\iBet\AGiBet\AGiBet\AGiBetWeb\obj\Debug\AGiBetWeb.dll
+D:\Thien Nam\iBet\AGiBet\AGiBet\AGiBetWeb\obj\Debug\AGiBetWeb.pdb
