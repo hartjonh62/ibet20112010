@@ -75,6 +75,7 @@
     <Compile Include="MemberInfomation\clsDataAccessAccount.cs" />
     <Compile Include="MemberInfomation\clsDataAccessBalance.cs" />
     <Compile Include="MemberInfomation\clsDataAccessFunction.cs" />
+    <Compile Include="MemberInfomation\clsDataAccessMember.cs" />
     <Compile Include="MemberInfomation\clsDataAccessModule.cs" />
     <Compile Include="MemberInfomation\clsDataAccessSoccerLive.cs" />
     <Compile Include="MemberInfomation\clsDataAccessSoccerBetSetting.cs" />

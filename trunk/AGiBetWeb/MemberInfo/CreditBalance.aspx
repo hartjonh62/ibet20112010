@@ -10,55 +10,47 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link href='../App_Themes/AgencyV2/common.css' type='text/css' rel='stylesheet' />
     <link href='../App_Themes/AgencyV2/main.css' type='text/css' rel='stylesheet' />
-
     <script type='text/javascript' src='../Js/opt/Core.js?v=20091230'></script>
-
     <script type='text/javascript' src='../Js/Common.js?v=20091230'></script>
-
     <script type="text/javascript" src="../Js/IBCWnd/IBCWnd.js?v=20091230"></script>
-
     <script type="text/javascript" src="../Js/MemberInfo/CreditBalance.js?v=20091230"></script>
-
     <script type="text/javascript" src="../Js/Paging.js?v=20091230"></script>
-
     <script type="text/javascript">
-    function viewOutSt(custId, userName)
-    {
-        window.location = "../Report/OutstandingAgentDetail.aspx?custid=" + custId + "&username=" + userName + "&type=RunByDate_Mem" + '&ShowCasino=1' + '&ShowSB=1' + '&ShowHR=1' + '&ShowFI=1';
-    }
-
-    function viewBal(act, custId) {
-        window.location = "CreditBalance.aspx?act=" + act + "&custid=" + custId;
-    }
-    
-    //paging
-    function NavigatePage(mypage, strNavigatePage, site) {
-        NavigatePage2(mypage, strNavigatePage, "act", site);
-    }
-    
-    function GotoPageNext(strNavigatePage, site) {
-        GotoPageNext2(strNavigatePage, "act", site);
-    }
-    
-    function searchByUsername(strNavigatePage, site) {
-        var ctrlCondition = $('txtUserName');
-        var conditionValue = "";
-        if (ctrlCondition != null) {
-            $('hdtotalpages').value = 0;
-            conditionValue = ctrlCondition.value;
-            $('hdsearch').value = (conditionValue.length > 0 ? 'yes' : '');
-            var url = strNavigatePage + '?' + 'custid=' + $('hdcus').value;
-            url = url + '&search=' + $('hdsearch').value;
-            url = url + '&username=' + ($('hdsearch').value == 'yes' ? conditionValue : '');
-            url = url + '&status=' + $('statusFilter').value;
-            url = url + '&total=' + $('hdtotalpages').value;
-            NavigatePage(1, url, site);
+        function viewOutSt(custId, userName) {
+            window.location = "../Report/OutstandingAgentDetail.aspx?custid=" + custId + "&username=" + userName + "&type=RunByDate_Mem" + '&ShowCasino=1' + '&ShowSB=1' + '&ShowHR=1' + '&ShowFI=1';
         }
-        $('dSubmit').disabled = true;
-        $('dSubmit').className = 'btn2';
-    }
-    </script>
 
+        function viewBal(act, custId) {
+            window.location = "CreditBalance.aspx?act=" + act + "&custid=" + custId;
+        }
+
+        //paging
+        function NavigatePage(mypage, strNavigatePage, site) {
+            NavigatePage2(mypage, strNavigatePage, "act", site);
+        }
+
+        function GotoPageNext(strNavigatePage, site) {
+            GotoPageNext2(strNavigatePage, "act", site);
+        }
+
+        function searchByUsername(strNavigatePage, site) {
+            var ctrlCondition = $('txtUserName');
+            var conditionValue = "";
+            if (ctrlCondition != null) {
+                $('hdtotalpages').value = 0;
+                conditionValue = ctrlCondition.value;
+                $('hdsearch').value = (conditionValue.length > 0 ? 'yes' : '');
+                var url = strNavigatePage + '?' + 'custid=' + $('hdcus').value;
+                url = url + '&search=' + $('hdsearch').value;
+                url = url + '&username=' + ($('hdsearch').value == 'yes' ? conditionValue : '');
+                url = url + '&status=' + $('statusFilter').value;
+                url = url + '&total=' + $('hdtotalpages').value;
+                NavigatePage(1, url, site);
+            }
+            $('dSubmit').disabled = true;
+            $('dSubmit').className = 'btn2';
+        }
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -93,11 +85,11 @@
                                 <td style="padding-top: 6px; padding-bottom: 6px;">
                                     <asp:DropDownList ID="ddlStatusFilter" Style="font-size: 8pt; font-weight: normal;
                                         width: 80px; width: 60px;" runat="server">
-                                        <asp:ListItem Value="0">All</asp:ListItem>
-                                        <asp:ListItem Value="1" Selected='selected'>Open</asp:ListItem>
-                                        <asp:ListItem Value="2">Suspended</asp:ListItem>
-                                        <asp:ListItem Value="3">Closed</asp:ListItem>
-                                        <asp:ListItem Value="4">Disabled</asp:ListItem>
+                                        <asp:ListItem Value="0" Text="All"></asp:ListItem>
+                                        <asp:ListItem Value="1" Selected='selected' Text="Open"></asp:ListItem>
+                                        <asp:ListItem Value="2" Text="Suspended"></asp:ListItem>
+                                        <asp:ListItem Value="3" Text="Closed"></asp:ListItem>
+                                        <asp:ListItem Value="4" Text="Disabled"></asp:ListItem>
                                     </asp:DropDownList>
                                 </td>
                                 <td style="padding-top: 6px; padding-bottom: 6px;">
@@ -252,11 +244,86 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="bg_white c">
-                                        <td colspan="14" class="nobold">
-                                            No information is available
+                                    <%
+                                        int dem = 0;
+                                        AGiBetBusiness.MemberInfomation.clsBusinessAccount objBAccount = new AGiBetBusiness.MemberInfomation.clsBusinessAccount();
+                                        AGiBetBusiness.MemberInfomation.clsBusinessBalance objBBalance = new AGiBetBusiness.MemberInfomation.clsBusinessBalance();
+                                        switch (ddlStatusFilter.SelectedValue)
+                                        { 
+                                            case "0":
+                                                this.lblStatus.Text = "All";
+                                                break;
+                                            case "1":
+                                                this.lblStatus.Text = "Open";
+                                                break;
+                                            case "2":
+                                                this.lblStatus.Text = "Suspended";
+                                                break;
+                                            case "3":
+                                                this.lblStatus.Text = "Closed";
+                                                break;
+                                            case "4":
+                                                this.lblStatus.Text = "Disable";
+                                                break;
+                                        }
+                                        foreach (AGiBetCommon.MemberInformation.clsAccount item in objBAccount.getAll())
+                                        {
+                                            if (((String.IsNullOrEmpty(this.txtUserName.Text) || this.txtUserName.Text=="All") || (!String.IsNullOrEmpty(this.txtUserName.Text) && item.UserName.ToLower() == this.txtUserName.Text.ToLower())) && (ddlStatusFilter.SelectedValue == "0" || (ddlStatusFilter.SelectedValue == "1" && item.IsOpen) || (ddlStatusFilter.SelectedValue == "2" && item.IsSuspended) || (ddlStatusFilter.SelectedValue == "3" && !item.IsOpen) || (ddlStatusFilter.SelectedValue == "4" && !item.IsOutright)))
+                                            {
+                                                dem++;
+                                                AGiBetCommon.MemberInformation.clsBalance objBalance = new AGiBetCommon.MemberInformation.clsBalance();
+                                                objBalance = objBBalance.getByAccId(item.Id);
+                                    
+                                        
+                                    %>
+                                    <tr align="center" bgcolor="#F6F8F9" onmouseover="bgColor='#f8ff8d'" onmouseout="bgColor='#F6F8F9'">
+                                        <td >
+                                            <%=dem%>
+                                        </td>
+                                        <td >
+                                            <asp:Label ID="lblStatus" runat="server"></asp:Label>
+                                        </td>
+                                        <td >
+                                            <%=item.UserName%>
+                                        </td>
+                                        <td >
+                                            <%=item.FirtName%>
+                                        </td>
+                                        <td >
+                                            <%=item.LastName%>
+                                        </td>
+                                        <td >
+                                            <a href="javascript:EditCredit(<%=item.Id%>);"><%=objBalance.Credit.ToString()%></a>
+                                        </td>
+                                        <td >
+                                            <%=objBalance.CashBalance.ToString()%>
+                                        </td>
+                                        <td >
+                                            <%=objBalance.YesCashBalance.ToString()%>
+                                        </td>
+                                        <td >
+                                            <%=objBalance.BetCredit.ToString()%>
+                                        </td>
+                                        <td >
+                                            <%=objBalance.OutStanding.ToString()%>
+                                        </td>
+                                        <td >
+                                            Member Turnover
+                                        </td>
+                                        <td  style="width: 110px;">
+                                            <%=item.LastLoginIP%>
+                                        </td>
+                                        <td >
+                                            <%=item.LoginIP%>
+                                        </td>
+                                        <td >
+                                            <%=item.UserName%>
                                         </td>
                                     </tr>
+                                    <% 
+}
+                                        }
+                                    %>
                                 </tbody>
                             </table>
                         </div>

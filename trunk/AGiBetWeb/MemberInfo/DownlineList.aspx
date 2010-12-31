@@ -328,6 +328,25 @@
                                         AGiBetBusiness.MemberInfomation.clsBusinessAccount objBAcount = new AGiBetBusiness.MemberInfomation.clsBusinessAccount();
                                         AGiBetBusiness.MemberInfomation.clsBusinessUserCommission objBUserCommission = new AGiBetBusiness.MemberInfomation.clsBusinessUserCommission();
                                         System.Collections.Generic.List<AGiBetCommon.MemberInformation.clsAccount> l = new System.Collections.Generic.List<AGiBetCommon.MemberInformation.clsAccount>();
+                                        switch (ddlStatusFilter.SelectedValue)
+                                        {
+                                            case "0":
+                                                this.lblStatus2.Text = "All";
+                                                break;
+                                            case "1":
+                                                this.lblStatus2.Text = "Open";
+                                                break;
+                                            case "2":
+                                                this.lblStatus2.Text = "Suspended";
+                                                break;
+                                            case "3":
+                                                this.lblStatus2.Text = "Closed";
+                                                break;
+                                            case "4":
+                                                this.lblStatus2.Text = "Disable";
+                                                break;
+                                        }
+                                            
                                         foreach (AGiBetCommon.MemberInformation.clsAccount item in objBAcount.getAll())
                                         {
                                             if (((String.IsNullOrEmpty(this.txtUserName.Text)) || (!String.IsNullOrEmpty(this.txtUserName.Text) && item.UserName.ToLower() == this.txtUserName.Text.ToLower())) && (ddlStatusFilter.SelectedValue == "0" || (ddlStatusFilter.SelectedValue == "1" && item.IsOpen) || (ddlStatusFilter.SelectedValue == "2" && item.IsSuspended) || (ddlStatusFilter.SelectedValue == "3" && !item.IsOpen) || (ddlStatusFilter.SelectedValue == "4" && !item.IsOutright)))
@@ -342,13 +361,11 @@
                                                 <%=count%>
                                             </td>
                                             <td class="l">
-                                                <%=item.AgentId%>
-                                                
                                                 <a href="javascript:viewCustOutSt('<%=item.UserName%>', <%=item.Id%>);"><%=item.UserName%></a>
                                             </td>
                                             <td style="white-space: nowrap;">
                                                 &nbsp;<a href="javascript:EditMember_Single('<%=item.Id%>', '<%=item.UserName %>', '<%=item.AgentId %>', 'Agent')"
-                                                    title="Open">Open</a>&nbsp;<span style="cursor: pointer" onclick="ShowFrmUpdStatus(this, <%=item.Id %>, <%=(!item.IsOpen).ToString().ToLower() %>,<%=item.IsSuspended.ToString().ToLower() %>,<%=item.AllowAutoPT.ToString().ToLower() %>, <%=item.IsOutright.ToString().ToLower() %>)"
+                                                    title="Open"><asp:Label ID="lblStatus2" runat="server"></asp:Label></a>&nbsp;<span style="cursor: pointer" onclick="ShowFrmUpdStatus(this, <%=item.Id %>, <%=(!item.IsOpen).ToString().ToLower() %>,<%=item.IsSuspended.ToString().ToLower() %>,<%=item.AllowAutoPT.ToString().ToLower() %>, <%=item.IsOutright.ToString().ToLower() %>)"
                                                         class="arrow1" title="Status">&nbsp;&nbsp;&nbsp;</span>
                                             </td>
                                             <td>

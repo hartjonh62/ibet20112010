@@ -10,3 +10,8 @@ function showTransYesBalance(custid)
     var popH = 390, popW = 450;
     ibcWnd.open('../Popup/TransYesBalanceForAgent.aspx?custid=' + custid + '&isyes=' + isyes + '&status=-1',  '', 50, 100, popW, popH, 'class1', 'class2');
 }
+function EditCredit(custid) {
+    var isyes = 1;
+    var popH = 150, popW = 450;
+    ibcWnd.open('../../Popup/EditCredit.aspx?custid=' + custid + '&isyes=' + isyes + '&status=-1', '', 50, 100, popW, popH, 'class1', 'class2');
+}

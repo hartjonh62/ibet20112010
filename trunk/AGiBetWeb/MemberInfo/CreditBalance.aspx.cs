@@ -10,6 +10,7 @@ using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
+using AGiBetBusiness.MemberInfomation;
 
 public partial class MemberInfo_CreditBalance : System.Web.UI.Page
 {

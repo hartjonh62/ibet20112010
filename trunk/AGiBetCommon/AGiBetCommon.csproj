@@ -71,6 +71,7 @@
     <Compile Include="MemberInformation\clsAccount.cs" />
     <Compile Include="MemberInformation\clsBalance.cs" />
     <Compile Include="MemberInformation\clsFunction.cs" />
+    <Compile Include="MemberInformation\clsMember.cs" />
     <Compile Include="MemberInformation\clsModule.cs" />
     <Compile Include="MemberInformation\clsUserRight.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

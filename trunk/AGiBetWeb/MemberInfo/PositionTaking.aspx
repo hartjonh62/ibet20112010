@@ -221,11 +221,165 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td colspan="45" class="bg_white c nobold">
-                                No information is available
+                    <%
+                        int count = 0;
+                        AGiBetCommon.MemberInformation.clsAccount objAcount = new AGiBetCommon.MemberInformation.clsAccount();
+                        AGiBetBusiness.MemberInfomation.clsBusinessAccount objBAcount = new AGiBetBusiness.MemberInfomation.clsBusinessAccount();
+                        AGiBetBusiness.MemberInfomation.clsBusinessSoccerDeadBall objBSDBall = new AGiBetBusiness.MemberInfomation.clsBusinessSoccerDeadBall();
+                        AGiBetBusiness.MemberInfomation.clsBusinessSoccerLive objBSLive = new AGiBetBusiness.MemberInfomation.clsBusinessSoccerLive();
+                        foreach (AGiBetCommon.MemberInformation.clsAccount item in objBAcount.getAll())
+                        {
+                            AGiBetCommon.MemberInformation.clsSoccerDeadBall objSDBall = new AGiBetCommon.MemberInformation.clsSoccerDeadBall();
+                            AGiBetCommon.MemberInformation.clsSoccerLive objSLive = new AGiBetCommon.MemberInformation.clsSoccerLive();
+                            count++;
+                            objSDBall = objBSDBall.getByAccId(item.Id);
+                            objSLive = objBSLive.getByAccId(item.Id);
+                        
+                         %>
+                    <tr align="center" bgcolor="#F6F8F9" onmouseover="bgColor='#f8ff8d'" onmouseout="bgColor='#F6F8F9'">
+                        <td >
+                                <%=count %>
+                            </td>
+                            <td >
+                                <a href="javascript:viewCustOutSt('<%=item.UserName%>', <%=item.Id%>);"><%=item.UserName%></a>
+                            </td>
+                            <td >
+                                <%=objSDBall.Handi_NG.ToString() %>
+                            </td>
+                            <td >
+                                <%=objSDBall.Over_Under.ToString() %>
+                            </td>
+                            <td >
+                                <%=objSDBall.FirtHandicap.ToString() %>
+                            </td>
+                            <td >
+                                <%=objSDBall.FirtOverUnder.ToString() %>
+                            </td>
+                            <td >
+                                <%=objSDBall.Over_Event.ToString() %>
+                            </td>
+                            <td >
+                                <%=objSDBall.OneXTwo.ToString() %>
+                            </td>
+                            <td >
+                                <%=objSDBall.CorrectScore.ToString() %>
+                            </td>
+                            <td >
+                                <%=objSDBall.TotalGoal.ToString() %>
+                            </td>
+                            <td >
+                                <%=objSDBall.MixParlay.ToString() %>
+                            </td>
+                            <td >
+                                <%=objSDBall.Outright.ToString() %>
+                            </td>
+                            <td >
+                                <%=objSLive.Handi_NG.ToString() %>
+                            </td>
+                            <td >
+                                <%=objSLive.Over_Under.ToString() %>
+                            </td>
+                            <td >
+                                <%=objSLive.FirtHandicap.ToString() %>
+                            </td>
+                            <td >
+                                <%=objSLive.FirtOverUnder.ToString() %>
+                            </td>
+                            <td >
+                                0.00
+                            </td>
+                            <td >
+                                0.00
+                            </td>
+                            <td >
+                                0.00
+                            </td>
+                            <td >
+                                0.00
+                            </td>
+                            <td >
+                                0.00
+                            </td>
+                            <td >
+                                0.00
+                            </td>
+                            <td >
+                                0.00
+                            </td>
+                            <td >
+                                0.00
+                            </td>
+                            <td >
+                                0.00
+                            </td>
+                            <td >
+                                0.00
+                            </td>
+                            <td >
+                                0.00
+                            </td>
+                            <td >
+                                0.00
+                            </td>
+                            <td >
+                                0.00
+                            </td>
+                            <td >
+                                0.00
+                            </td>
+                            <td >
+                                0.00
+                            </td>
+                            <td >
+                                0.00
+                            </td>
+                            <td >
+                                0.00
+                            </td>
+                            <td >
+                                0.00
+                            </td>
+                            <td >
+                                0.00
+                            </td>
+                            <td >
+                                0.00
+                            </td>
+                            <td >
+                                0.00
+                            </td>
+                            <td >
+                                0.00
+                            </td>
+                            <td >
+                                0.00
+                            </td>
+                            <td >
+                                0.00
+                            </td>
+                            <td >
+                                0.00
+                            </td>
+                            <td >
+                                0.00
+                            </td>
+                            <td >
+                                0.00
+                            </td>
+                            <td >
+                                0.00
+                            </td>
+                            <td >
+                                0.00
+                            </td>
+                            <td >
+                                0.00
+                            </td>
+                            <td >
+                                <a href="javascript:viewCustOutSt('<%=item.UserName%>', <%=item.Id%>);"><%=item.UserName%></a>
                             </td>
                         </tr>
+                        <%} %>
                     </tbody>
                 </table>
             </div>

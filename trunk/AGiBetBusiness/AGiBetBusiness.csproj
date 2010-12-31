@@ -69,7 +69,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MemberInfomation\clsBusinessAccount.cs" />
+    <Compile Include="MemberInfomation\clsBusinessBalance.cs" />
     <Compile Include="MemberInfomation\clsBusinessFunction.cs" />
+    <Compile Include="MemberInfomation\clsBusinessMember.cs" />
     <Compile Include="MemberInfomation\clsBusinessModule.cs" />
     <Compile Include="MemberInfomation\clsBusinessSoccerBetSetting.cs" />
     <Compile Include="MemberInfomation\clsBusinessSoccerDeadBall.cs" />

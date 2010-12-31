@@ -314,6 +314,13 @@
     <Compile Include="Popup\CreditTransfer.aspx.designer.cs">
       <DependentUpon>CreditTransfer.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Popup\EditCredit.aspx.cs">
+      <DependentUpon>EditCredit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Popup\EditCredit.aspx.designer.cs">
+      <DependentUpon>EditCredit.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Popup\EditSubAcc.aspx.cs">
       <DependentUpon>EditSubAcc.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -950,6 +957,7 @@
     <Content Include="MenuUsrInfo.aspx" />
     <Content Include="Popup\AddSubAcc.aspx" />
     <Content Include="Popup\CreditTransfer.aspx" />
+    <Content Include="Popup\EditCredit.aspx" />
     <Content Include="Popup\EditSubAcc.aspx" />
     <Content Include="Popup\GoalHistory.aspx" />
     <Content Include="Popup\ResetPass.aspx" />

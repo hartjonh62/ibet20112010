@@ -134,11 +134,69 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr class="bg_white c">
-                                                <td colspan="25" class="nobold">
-                                                    No information is available
+                                            <%
+                                                int count=0;
+                                                AGiBetBusiness.MemberInfomation.clsBusinessMember objBMember = new AGiBetBusiness.MemberInfomation.clsBusinessMember();
+                                                foreach (AGiBetCommon.MemberInformation.clsMember item in objBMember.getAll())
+                                                {
+                                                    count++;
+                                            %>
+
+                                            <tr align="center" bgcolor="#F6F8F9" onmouseover="bgColor='#f8ff8d'" onmouseout="bgColor='#F6F8F9'">
+                                                <td  style="width: 25px;">
+                                                    <%=count %>
+                                                </td>
+                                                <td >
+                                                    <a href="javascript:viewCustOutSt('<%=item.UserName%>', <%=item.UserName %>);"><%=item.UserName%></a>
+                                                    
+                                                </td>
+                                                <td >
+                                                    <%=item.FName %>
+                                                </td>
+                                                <td >
+                                                    <%=item.LName %>
+                                                </td>
+                                                <td>
+                                                    <%=item.MemberGroupId.ToString() %>
+                                                </td>
+                                                <td  title="A = Agent">
+                                                    0.00
+                                                </td>
+                                                <td  title="P = Member">
+                                                    <%=item.CommissionHDPOU.ToString() %>
+                                                </td>
+                                                <td  title="A = Agent">
+                                                    0.00
+                                                </td>
+                                                <td  title="P = Member">
+                                                    <%=item.Commission1x2.ToString() %>
+                                                </td>
+                                                <td  title="A = Agent">
+                                                    0.00
+                                                </td>
+                                                <td  title="P = Member">
+                                                    <%=item.CommissionOther.ToString() %>
+                                                </td>
+                                                <td  title="A = Agent">
+                                                    0.00
+                                                </td>
+                                                <td  title="P = Member">
+                                                    0.00
+                                                </td>
+                                                <td  title="A = Agent">
+                                                    0.00
+                                                </td>
+                                                <td  title="P = Member">
+                                                    0.00
+                                                </td>
+                                                <td >
+                                                    Credit
+                                                </td>
+                                                <td >
+                                                    <a href="javascript:viewCustOutSt('<%=item.UserName%>', <%=item.UserName %>);"><%=item.UserName%></a>
                                                 </td>
                                             </tr>
+                                            <%} %>
                                         </tbody>
                                     </table>
                                 </div>
