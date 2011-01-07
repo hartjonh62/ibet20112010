@@ -435,6 +435,9 @@
       <DependentUpon>AddEditHorseRacing.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="MemberInfo\AddEditHorseRacing.aspx.designer.cs">
+      <DependentUpon>AddEditHorseRacing.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MemberInfo\CasinoPositionTaking.aspx.cs">
       <DependentUpon>CasinoPositionTaking.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
