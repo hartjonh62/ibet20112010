@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="FGLG.aspx.cs" Inherits="TotalBets_FGLG" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="TotalBets_FGLG" Codebehind="FGLG.aspx.cs" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
@@ -17,6 +17,38 @@
 </script></head>
 
 <body>
-<div id="page_main"><div id="header_main">FG/LG</div><div id="sContent"><table class="tblRpt" cellpadding="0" cellspacing="1" border="0"><tr class="RptHeader"><td style="width: 20px;">#</td><td style="width: 120px;">Time</td><td style="width: 200px;">Home/Away</td><td style="width: 100px;">First Goal</td><td style="width: 100px;">Last Goal</td><td style="width: 100px;">No Goal</td></tr><tr><td colspan="6" class="bg_white c nobold">No information is available</td></tr></table></div></div>
+    <div id="page_main">
+        <div id="header_main">
+            FG/LG</div>
+        <div id="sContent">
+            <table class="tblRpt" cellpadding="0" cellspacing="1" border="0">
+                <tr class="RptHeader">
+                    <td style="width: 20px;">
+                        #
+                    </td>
+                    <td style="width: 120px;">
+                        Time
+                    </td>
+                    <td style="width: 200px;">
+                        Home/Away
+                    </td>
+                    <td style="width: 100px;">
+                        First Goal
+                    </td>
+                    <td style="width: 100px;">
+                        Last Goal
+                    </td>
+                    <td style="width: 100px;">
+                        No Goal
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="6" class="bg_white c nobold">
+                        No information is available
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
 </body>
 </html>
