@@ -657,49 +657,85 @@
       <DependentUpon>BestListC.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="TotalBets\BestListC.aspx.designer.cs">
+      <DependentUpon>BestListC.aspx</DependentUpon>
+    </Compile>
     <Compile Include="TotalBets\BetListM.aspx.cs">
       <DependentUpon>BetListM.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TotalBets\BetListM.aspx.designer.cs">
+      <DependentUpon>BetListM.aspx</DependentUpon>
     </Compile>
     <Compile Include="TotalBets\FGLG.aspx.cs">
       <DependentUpon>FGLG.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="TotalBets\FGLG.aspx.designer.cs">
+      <DependentUpon>FGLG.aspx</DependentUpon>
+    </Compile>
     <Compile Include="TotalBets\Financial.aspx.cs">
       <DependentUpon>Financial.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TotalBets\Financial.aspx.designer.cs">
+      <DependentUpon>Financial.aspx</DependentUpon>
     </Compile>
     <Compile Include="TotalBets\HDPOU.aspx.cs">
       <DependentUpon>HDPOU.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="TotalBets\HDPOU.aspx.designer.cs">
+      <DependentUpon>HDPOU.aspx</DependentUpon>
+    </Compile>
     <Compile Include="TotalBets\Horseracing.aspx.cs">
       <DependentUpon>Horseracing.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TotalBets\Horseracing.aspx.designer.cs">
+      <DependentUpon>Horseracing.aspx</DependentUpon>
     </Compile>
     <Compile Include="TotalBets\HTFT.aspx.cs">
       <DependentUpon>HTFT.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="TotalBets\HTFT.aspx.designer.cs">
+      <DependentUpon>HTFT.aspx</DependentUpon>
+    </Compile>
     <Compile Include="TotalBets\MoneyLine.aspx.cs">
       <DependentUpon>MoneyLine.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TotalBets\MoneyLine.aspx.designer.cs">
+      <DependentUpon>MoneyLine.aspx</DependentUpon>
     </Compile>
     <Compile Include="TotalBets\NextGoal.aspx.cs">
       <DependentUpon>NextGoal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="TotalBets\NextGoal.aspx.designer.cs">
+      <DependentUpon>NextGoal.aspx</DependentUpon>
+    </Compile>
     <Compile Include="TotalBets\OddEven1x2.aspx.cs">
       <DependentUpon>OddEven1x2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TotalBets\OddEven1x2.aspx.designer.cs">
+      <DependentUpon>OddEven1x2.aspx</DependentUpon>
     </Compile>
     <Compile Include="TotalBets\OutRight.aspx.cs">
       <DependentUpon>OutRight.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="TotalBets\OutRight.aspx.designer.cs">
+      <DependentUpon>OutRight.aspx</DependentUpon>
+    </Compile>
     <Compile Include="TotalBets\TotalGoal.aspx.cs">
       <DependentUpon>TotalGoal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TotalBets\TotalGoal.aspx.designer.cs">
+      <DependentUpon>TotalGoal.aspx</DependentUpon>
     </Compile>
     <Compile Include="Transfer\MultipleTransfer.aspx.cs">
       <DependentUpon>MultipleTransfer.aspx</DependentUpon>

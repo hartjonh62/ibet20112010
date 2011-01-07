@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiBetCommon", "MiBetCommon\MiBetCommon.csproj", "{D494BB7D-4290-4608-B9ED-A6C321E39DEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiBetDataAccess", "MiBetDataAccess\MiBetDataAccess.csproj", "{CC7F6F3F-3F50-467C-A00E-1DFF132FB72C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiBetBusiness", "MiBetBusiness\MiBetBusiness.csproj", "{7E45112E-3E69-4F21-95F2-C4C9B77CC848}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiBetWeb", "MiBetWeb\MiBetWeb.csproj", "{5FBD8191-2AB4-444C-BADF-716FFBA1719F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D494BB7D-4290-4608-B9ED-A6C321E39DEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D494BB7D-4290-4608-B9ED-A6C321E39DEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D494BB7D-4290-4608-B9ED-A6C321E39DEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D494BB7D-4290-4608-B9ED-A6C321E39DEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC7F6F3F-3F50-467C-A00E-1DFF132FB72C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC7F6F3F-3F50-467C-A00E-1DFF132FB72C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC7F6F3F-3F50-467C-A00E-1DFF132FB72C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC7F6F3F-3F50-467C-A00E-1DFF132FB72C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E45112E-3E69-4F21-95F2-C4C9B77CC848}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E45112E-3E69-4F21-95F2-C4C9B77CC848}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E45112E-3E69-4F21-95F2-C4C9B77CC848}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E45112E-3E69-4F21-95F2-C4C9B77CC848}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FBD8191-2AB4-444C-BADF-716FFBA1719F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FBD8191-2AB4-444C-BADF-716FFBA1719F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FBD8191-2AB4-444C-BADF-716FFBA1719F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FBD8191-2AB4-444C-BADF-716FFBA1719F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
