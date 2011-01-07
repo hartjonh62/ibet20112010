@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="EditMinPT.aspx.cs" Inherits="UserSuper_EditMinPT" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="UserSuper_EditMinPT" Codebehind="EditMinPT.aspx.cs" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
