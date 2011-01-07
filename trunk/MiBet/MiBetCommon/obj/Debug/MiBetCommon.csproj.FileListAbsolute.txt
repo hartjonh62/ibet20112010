@@ -1,0 +1,5 @@
+D:\Thien Nam\iBet\MiBet\MiBetCommon\bin\Debug\MiBetCommon.dll
+D:\Thien Nam\iBet\MiBet\MiBetCommon\bin\Debug\MiBetCommon.pdb
+D:\Thien Nam\iBet\MiBet\MiBetCommon\obj\Debug\ResolveAssemblyReference.cache
+D:\Thien Nam\iBet\MiBet\MiBetCommon\obj\Debug\MiBetCommon.dll
+D:\Thien Nam\iBet\MiBet\MiBetCommon\obj\Debug\MiBetCommon.pdb

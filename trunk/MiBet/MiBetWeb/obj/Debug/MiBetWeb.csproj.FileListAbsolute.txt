@@ -1,0 +1,11 @@
+D:\Thien Nam\iBet\MiBet\MiBetWeb\bin\MiBetWeb.dll
+D:\Thien Nam\iBet\MiBet\MiBetWeb\bin\MiBetWeb.pdb
+D:\Thien Nam\iBet\MiBet\MiBetWeb\obj\Debug\ResolveAssemblyReference.cache
+D:\Thien Nam\iBet\MiBet\MiBetWeb\obj\Debug\MiBetWeb.dll
+D:\Thien Nam\iBet\MiBet\MiBetWeb\obj\Debug\MiBetWeb.pdb
+D:\Thien Nam\iBet\MiBet\MiBetWeb\bin\MiBetBusiness.dll
+D:\Thien Nam\iBet\MiBet\MiBetWeb\bin\MiBetCommon.dll
+D:\Thien Nam\iBet\MiBet\MiBetWeb\bin\MiBetDataAccess.dll
+D:\Thien Nam\iBet\MiBet\MiBetWeb\bin\MiBetBusiness.pdb
+D:\Thien Nam\iBet\MiBet\MiBetWeb\bin\MiBetCommon.pdb
+D:\Thien Nam\iBet\MiBet\MiBetWeb\bin\MiBetDataAccess.pdb
