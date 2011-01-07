@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="SignIn.aspx.cs" Inherits="SignIn" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="SignIn" Codebehind="SignIn.aspx.cs" %>
 
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -89,16 +89,15 @@
                 <td style="width:63px; text-align:right;"></td>                
                 <td style="width:24px;"><span id="language"></span></td>
 
-                <td style="width:80px; text-align:left;">                     
-                    <select name="select" id="select" onchange="Language(this.value); setCookie('ibclang', getLangCode(this.value), 30);" style="height: 20px; width: 85px;">
-                        <option value="1">English</option>
-                        <option value="2">繁體中文</option>
-                        <option value="5">简体中文</option>
-                        <option value="3">日本語</option>
-                        <option value="4">ภาษาไทย</option>
-
-                        <option value="6">한국어</option>
-                    </select>                                
+                <td style="width:80px; text-align:left;">
+                    <asp:DropDownList ID="ddlLanguage" runat="server" onchange="Language(this.value); setCookie('ibclang', getLangCode(this.value), 30);" style="height: 20px; width: 85px;">
+                        <asp:ListItem Text="English" Value="1" />
+                        <asp:ListItem Text="繁體中文" Value="2" />
+                        <asp:ListItem Text="简体中文" Value="3" />
+                        <asp:ListItem Text="日本語" Value="4" />
+                        <asp:ListItem Text="ภาษาไทย" Value="5" />
+                        <asp:ListItem Text="한국어" Value="6" />
+                    </asp:DropDownList>                     
                 </td>
             </tr>
             <tr>
@@ -127,7 +126,7 @@
                 <td></td>
 
                 <td colspan="2">
-                    <input id="login" type="button" class="buttonsite" value="Login" onclick="ExcLogin();" />
+                    <asp:Button ID="btnLogin" class="buttonsite" OnClientClick="ExcLogin();" runat="server" Text="Login" />
                 </td>
             </tr>                       
         </table> 
