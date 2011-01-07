@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="CancelBetList.aspx.cs" Inherits="Report_CancelBetList" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="Report_CancelBetList" Codebehind="CancelBetList.aspx.cs" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
@@ -52,7 +52,14 @@
 </script>
 </head>
 <body>
-<form id="frmmain" method="get"><div id="page_main"><div id="header_main" style="width: 97%"><div class="divBoxRight"><input type="image" id="exporttoexcel" name="exporttoexcel" alt="Export to Excel" nofocus="true" src="../App_Themes/AgencyV2/Images/excel.gif" title="Export to Excel" class="hand" /></div>Void/Rejected Bet List (Last 3 days)</div><table border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr><tr><td><span id="spData"><form method="post"><div id=""><table id="tbl1" border="0" cellspacing="0" cellpadding="0" class="hidden" width="99%"><tr><td style="text-align: left; white-space: nowrap; width: 50%;"><div id="header_main" style="position: relative; left: -2px;"><b>Bet List {frmtodate}</b></div></td><td align="right" style="width: 45%;"><div style="display: none"><div style="text-align: right;"><input type="image" id="exporttoexcel" name="exporttoexcel" alt="{exporttoexcel}" nofocus="true" src="../App_Themes/AgencyV2/Images/excel.gif" title="{exporttoexcel}" class="hand" /></div></div></td></tr></table><table id="tbl2" border="0" cellpadding="0" cellspacing="1" style="display: none; margin-bottom: 10px; width: 100%" class="tblRpt"><tr class="RptHeader"><td style="width: 20px;">#</td><td style="width: 90px;">Member</td><td style="width: 130px;">Trans.Time</td><td>Choice</td><td style="width: 50px;">Odds</td><td style="width: 50px;">Stake</td><td style="width: 85px;">Status</td></tr><tr><td colspan="9" class="bg_white c">No information is available</td></tr></table></form> </span></td></tr></table><script type="text/javascript"></script></div></form>
+    <form id="frmmain" runat="server">
+    <div id="page_main"><div id="header_main" style="width: 97%"><div class="divBoxRight"><input type="image" id="exporttoexcel" name="exporttoexcel" alt="Export to Excel" nofocus="true" src="../App_Themes/AgencyV2/Images/excel.gif" title="Export to Excel" class="hand" /></div>
+        <asp:Label ID="lblTitle" runat="server" 
+            Text="Void/Rejected Bet List (Last 3 days)"></asp:Label>
+        </div><table border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr><tr><td><span id="spData"><form method="post"><div id=""><table id="tbl1" border="0" cellspacing="0" cellpadding="0" class="hidden" width="99%"><tr><td style="text-align: left; white-space: nowrap; width: 50%;"><div id="header_main" style="position: relative; left: -2px;"><b>Bet List {frmtodate}</b></div></td><td align="right" style="width: 45%;"><div style="display: none"><div style="text-align: right;"><input type="image" id="exporttoexcel" name="exporttoexcel" alt="{exporttoexcel}" nofocus="true" src="../App_Themes/AgencyV2/Images/excel.gif" title="{exporttoexcel}" class="hand" /></div></div></td></tr></table><table id="tbl2" border="0" cellpadding="0" cellspacing="1" style="display: none; margin-bottom: 10px; width: 100%" class="tblRpt"><tr class="RptHeader"><td style="width: 20px;">#</td><td style="width: 90px;">Member</td><td style="width: 130px;">Trans.Time</td><td>Choice</td><td style="width: 50px;">Odds</td><td style="width: 50px;">Stake</td><td style="width: 85px;">Status</td></tr><tr><td colspan="9" class="bg_white c">No information is available</td></tr></table>
+            </div>
+            </form> </span></td></tr></table><script type="text/javascript"></script></div>
+    </form>
 
 </body>
 </html>

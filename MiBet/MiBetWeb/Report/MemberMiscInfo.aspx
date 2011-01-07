@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="MemberMiscInfo.aspx.cs" Inherits="Report_MemberMiscInfo" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="Report_MemberMiscInfo" Codebehind="MemberMiscInfo.aspx.cs" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
@@ -38,6 +38,47 @@ function FormReload(custid,act)
 </script>
 </head>
 <body>
-<div id="page_main"><div id="header_main" style="width:97%"><div class="divBoxRight"><input type="checkbox" id="chk_rpt_bold" checked='checked' onclick="boldTable(this.checked);" /><span style="color:#999; text-transform:none;">Bold</span></div>Agent Outstanding</div><table border="0" cellpadding="0" cellspacing="0"><tr><td><div><table class="tblRpt boldrow r" width="100%" border="0" cellpadding="0" cellspacing="1" id="tbl-rpt"><tr class="RptHeader"><td width="100px" rowspan="2">User Name</td><td colspan="2">Sport Book</td></tr><tr class="RptHeader02"><td width="120px">Outstanding</td><td width="120px">Master Position</td></tr><tr><td class="c bg_white" colspan="3" style="font-weight: normal;">No information is available</td></tr></table></div></td></tr></table></div>
+    <form id="form1" runat="server">
+    <div id="page_main">
+        <div id="header_main" style="width: 97%">
+            <div class="divBoxRight">
+                <input type="checkbox" id="chk_rpt_bold" checked='checked' onclick="boldTable(this.checked);" /><span
+                    style="color: #999; text-transform: none;">Bold</span></div>
+            <asp:Label ID="lblTitle" runat="server" Text="Agent Outstanding"></asp:Label>
+        </div>
+        <table border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td>
+                    <div>
+                        <table class="tblRpt boldrow r" width="100%" border="0" cellpadding="0" cellspacing="1"
+                            id="tbl-rpt">
+                            <tr class="RptHeader">
+                                <td width="100px" rowspan="2">
+                                    User Name
+                                </td>
+                                <td colspan="2">
+                                    Sport Book
+                                </td>
+                            </tr>
+                            <tr class="RptHeader02">
+                                <td width="120px">
+                                    Outstanding
+                                </td>
+                                <td width="120px">
+                                    Master Position
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="c bg_white" colspan="3" style="font-weight: normal;">
+                                    No information is available
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
 </body>
 </html>
