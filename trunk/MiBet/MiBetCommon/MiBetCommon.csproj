@@ -42,10 +42,19 @@
     <Reference Include="System.Web" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MemberInfomation\clsAccount.cs" />
+    <Compile Include="MemberInfomation\clsBalance.cs" />
+    <Compile Include="MemberInfomation\clsFunction.cs" />
+    <Compile Include="MemberInfomation\clsMember.cs" />
+    <Compile Include="MemberInfomation\clsModule.cs" />
+    <Compile Include="MemberInfomation\clsSoccerBetSetting.cs" />
+    <Compile Include="MemberInfomation\clsSoccerDeadBall.cs" />
+    <Compile Include="MemberInfomation\clsSoccerLive.cs" />
+    <Compile Include="MemberInfomation\clsUserCommission.cs" />
+    <Compile Include="MemberInfomation\clsUserRight.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="MemberInfomation\" />
     <Folder Include="Report\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
