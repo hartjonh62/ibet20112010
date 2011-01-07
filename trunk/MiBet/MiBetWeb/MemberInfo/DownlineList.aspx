@@ -45,6 +45,7 @@
     }
 </script></head>
 <body>
+    <form id="form1" runat="server">
     <div id="page_main">
         <div id="header_main">
             Agent List&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:getPrint('tbl-container');"><img
@@ -111,12 +112,11 @@
                                 <table class="l" cellpadding="0" cellspacing="0" border="0">
                                     <tr>
                                         <td id="tdfdatetext" style="padding-top: 6px" class="l">
-                                            <span>&nbsp;User Name:</span>
-                                        </td>
+                                            <span>&nbsp;</span><asp:Label ID="Label1" runat="server" Text="User Name:"></asp:Label>
+&nbsp;</td>
                                         <td id="tdfdatetext" style="padding-top: 6px" class="l">
-                                            <input type="text" name="txtUserName" id="txtUserName" style="font-size: 8pt; font-weight: normal;"
-                                                value="" onkeypress="return KeyPress2(event);" onfocus="ClearAll()" onclick="ClearAll()" />
-                                        </td>
+                                            <asp:TextBox ID="txttxtUserName" runat="server"></asp:TextBox>
+&nbsp;</td>
                                         <td style="padding-top: 6px">
                                         </td>
                                         <td style="padding-top: 6px">
@@ -124,22 +124,17 @@
                                     </tr>
                                     <tr>
                                         <td style="padding-top: 6px; padding-bottom: 6px;">
-                                            <span>&nbsp;Status:</span>
+                                            <span>&nbsp;</span><asp:Label ID="Label2" runat="server" Text="Status: "></asp:Label>
                                         </td>
                                         <td style="padding-top: 6px; padding-bottom: 6px;">
-                                            <select style="width: 80px;" id="statusFilter" name="open" style="font-size: 8pt;
-                                                font-weight: normal;">
-                                                <option value="0" selected='selected'>All</option>
-                                                <option value="1">Open</option>
-                                                <option value="2">Suspended</option>
-                                                <option value="3">Closed</option>
-                                                <option value="4">Disabled</option>
-                                            </select>
-                                        </td>
+                                            <asp:DropDownList ID="ddlstatusFilter" runat="server">
+                                            </asp:DropDownList>
+&nbsp;</td>
                                         <td style="padding-top: 6px; padding-bottom: 6px;">
-                                            <input id="dSubmit" type="button" value="Submit" class="btn" style="width: 55px;"
+                                            <%--<input id="dSubmit" type="button" value="Submit" class="btn" style="width: 55px;"
                                                 style="width: 55px;" onclick="searchByUsername('DownlineList.aspx','AgencyV2')"
-                                                onmouseout="this.className='btn';" onmouseover="this.className='btnhover';" />
+                                                onmouseout="this.className='btn';" onmouseover="this.className='btnhover';" />--%>
+                                            <asp:Button ID="Button1" runat="server" Text="Submit" CssClass="btn" />
                                         </td>
                                         <td>
                                             <div id="loading" style="float: right" class="fl">
@@ -257,14 +252,14 @@
                                                 #
                                             </td>
                                             <td>
-                                                User Name
-                                            </td>
+                                                <asp:Label ID="Label3" runat="server" Text="User Name"></asp:Label>
+&nbsp;</td>
                                             <td>
-                                                Status
-                                            </td>
+                                                <asp:Label ID="Label4" runat="server" Text="Status"></asp:Label>
+&nbsp;</td>
                                             <td>
-                                                <input type="checkbox" id="chkall" onclick="CheckAll();" />
-                                            </td>
+                                                <asp:CheckBox ID="CheckBox1" runat="server" />
+&nbsp;</td>
                                             <td style="width: 60px;">
                                                 Horse Racing
                                             </td>
@@ -327,9 +322,8 @@
                                                     class="arrow1" title="Status">&nbsp;&nbsp;&nbsp;</span>
                                             </td>
                                             <td>
-                                                <input name="chkid" value="2012586;SMQQ01" onclick="chkChecked(this);" type="checkbox"
-                                                    statuscs="0" />
-                                            </td>
+                                                <asp:CheckBox ID="CheckBox2" runat="server" />
+&nbsp;</td>
                                             <td style="width: 60px;">
                                                 <div id="divHR_2012586" class="divEdit" style="cursor: pointer;" title="Edit" onclick="EditHR('2012586');" />
                                             </td>
@@ -389,9 +383,8 @@
                                                     class="arrow1" title="Status">&nbsp;&nbsp;&nbsp;</span>
                                             </td>
                                             <td>
-                                                <input name="chkid" value="2050492;SMQQ02" onclick="chkChecked(this);" type="checkbox"
-                                                    statuscs="0" />
-                                            </td>
+                                                <asp:CheckBox ID="CheckBox3" runat="server" />
+&nbsp;</td>
                                             <td style="width: 60px;">
                                                 <div id="divHR_2050492" class="divEdit" style="cursor: pointer;" title="Edit" onclick="EditHR('2050492');" />
                                             </td>
@@ -485,6 +478,8 @@
             </tr>
         </table>
     </div>
+
+    </form>
 
 </body>
 </html>
