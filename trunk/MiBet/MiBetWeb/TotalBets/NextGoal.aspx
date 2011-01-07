@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="NextGoal.aspx.cs" Inherits="TotalBets_NextGoal" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="TotalBets_NextGoal" Codebehind="NextGoal.aspx.cs" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
@@ -26,17 +26,43 @@ function GetNextGoal() {
     });    
 }
 
-function BindNextGoal(rs) {    
+function BindNextGoal(rs) {
     $('sContent').innerHTML = rs.responseText;
 }
 
-function openForecast(matchid, bettype, data)
-{
+function openForecast(matchid, bettype, data) {
     ibcWnd.open('../ForeCast/FCAH.aspx?matchid=' + matchid + '&b=' + bettype, '', 70, 50, 440, 170, 'class1', 'class2');
 }
 var timer = setTimeout("GetNextGoal()", 90000);
-</script></head>
+</script>
+</head>
 <body>
-<div id="page_main"><div id="header_main">Next Goal</div><div id="sContent"><table class="tblRpt" cellpadding="0" cellspacing="1" border="0"><tr class="RptHeader"><td style="width: 20px">#</td><td style="width: 80px">Time</td><td style="width: 120px">Event</td><td colspan="5" style="width: 140px">Turnover/Winlost</td></tr><tr><td colspan="8" class="bg_white c nobold">No information is available</td></tr></table></div></div>
+    <div id="page_main">
+        <div id="header_main">
+            Next Goal</div>
+        <div id="sContent">
+            <table class="tblRpt" cellpadding="0" cellspacing="1" border="0">
+                <tr class="RptHeader">
+                    <td style="width: 20px">
+                        #
+                    </td>
+                    <td style="width: 80px">
+                        Time
+                    </td>
+                    <td style="width: 120px">
+                        Event
+                    </td>
+                    <td colspan="5" style="width: 140px">
+                        Turnover/Winlost
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="8" class="bg_white c nobold">
+                        No information is available
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
 </body>
 </html>
