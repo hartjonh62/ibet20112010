@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AddSubAcc.aspx.cs" Inherits="Popup_AddSubAcc" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="Popup_AddSubAcc" Codebehind="AddSubAcc.aspx.cs" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
@@ -95,7 +95,107 @@ function SetValueCHK(obj){
 
 </head>
 <body>
-<form id="frmAdd" method="post" onsubmit="return formvalidation()"><div id="page_popup"><table align="center" width="95%" cellspacing="0" cellpadding="0" border="0"><tr><td class="l"><table border="0" cellpadding="0" cellspacing="0" width="99%" id="diverrmsg" style="display: none;"><tr><td class="emsg_1_1">&nbsp;</td><td class="emsg_1_2">&nbsp;</td><td class="emsg_1_3">&nbsp;</td></tr><tr><td valign="top" class="emsg_2_1">&nbsp;</td><td valign="top" id="spmsgerr" class="msgerr"></td><td class="emsg_2_2">&nbsp;</td></tr><tr><td class="emsg_3_1">&nbsp;</td><td class="emsg_3_2">&nbsp;</td><td class="emsg_3_3">&nbsp;</td></tr></table></td></tr><tr><td class="l"><div id="header_popup">Add Sub Account</div></td></tr><tr><td align="center"><table align="left" width="100%" class="tblPop" cellspacing="1" cellpadding="0" border="0"><tr class="bg_eb2"><td width="30%" class="r b">User Name</td><td class="l">SMQQSub<select name="number1" id="number1"><option selected="selected" value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select><select name="number2" id="number2"><option selected="selected" value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="0">0</option></select></td></tr><tr class="bg_eb2"><td class="r b">Password</td><td id="td_pass" class="l" title="Password must have at least 6 characters, including at least 2 letters and at least 2 digits. (e.g:pass22)"><input name="password" id="password" type="password" onkeyup="return checkpass(this,'td_pass');" /></td></tr><tr class="bg_eb2"><td class="r b">First Name</td><td id="td_fname" class="l"><input name="fname" id="fname" type="text" /></td></tr><tr class="bg_eb2"><td class="r b">Last Name</td><td id="td_lname" class="l"><input name="lname" id="lname" type="text" /></td></tr><tr class="bg_eb2"><td colspan="2" class="l b">* Account Permission</td></tr><tr class="bg_eb2"><td colspan="2" class="c" valign="middle"><input name="viewTotalBets" id="viewTotalBets" type="checkbox" />Total Bets &nbsp;<input name="viewReports" id="viewReports" type="checkbox" />Reports &nbsp;<input name="CreateAcc" id="CreateAcc" type="checkbox" />Create Account&nbsp;<input name="UpdateAcc" id="UpdateAcc" type="checkbox" />Update Account &nbsp;<input name="Transfer" id="Transfer" type="checkbox" />Transfer</td></tr><tr class="bg_eb2"><td class="c" colspan="2"><input name="Apply" id="Apply" type="submit" value=" Add " class="btn" /></td></tr></table></td></tr></table><input type="hidden" value="Password must have at least 6 characters, including at least 2 letters and at least 2 digits. (e.g:pass22)" id="lblPasswordRequire" /><input id="alertPasswordEmpty" name="alertPasswordEmpty" type="hidden" value="Sorry, password can not be empty!!!" /><input id="alertPasswordRequire" name="alertPasswordRequire" type="hidden" value="Password must have at least 6 characters, including at least 2 letters and at least 2 digits. (e.g:pass22)" /></div></form>
-
+    <form id="form1" runat="server">
+    <div id="page_popup">
+        <table align="center" width="95%" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+                <td class="l">
+                    <table border="0" cellpadding="0" cellspacing="0" width="99%" id="diverrmsg" style="display: none;">
+                        <tr>
+                            <td class="emsg_1_1">&nbsp;</td><td class="emsg_1_2">&nbsp;</td>
+                            <td class="emsg_1_3">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td valign="top" class="emsg_2_1">&nbsp;</td>
+                            <td valign="top" id="spmsgerr" class="msgerr"></td>
+                            <td class="emsg_2_2">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="emsg_3_1">&nbsp;</td>
+                            <td class="emsg_3_2">&nbsp;</td>
+                            <td class="emsg_3_3">&nbsp;</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="l">
+                    <div id="header_popup">Add Sub Account</div>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <table align="left" width="100%" class="tblPop" cellspacing="1" cellpadding="0" border="0">
+                        <tr class="bg_eb2">
+                            <td width="30%" class="r b">User Name</td>
+                            <td class="l">SMQQSub
+                                <asp:DropDownList ID="ddlNumber1" runat="server">
+                                    <asp:ListItem>1</asp:ListItem>
+                                    <asp:ListItem>2</asp:ListItem>
+                                    <asp:ListItem>3</asp:ListItem>
+                                    <asp:ListItem>4</asp:ListItem>
+                                    <asp:ListItem>5</asp:ListItem>
+                                    <asp:ListItem>6</asp:ListItem>
+                                    <asp:ListItem>7</asp:ListItem>
+                                    <asp:ListItem>8</asp:ListItem>
+                                    <asp:ListItem>9</asp:ListItem>
+                                    <asp:ListItem>0</asp:ListItem>
+                                </asp:DropDownList>
+                                <asp:DropDownList ID="ddlNumber2" runat="server">
+                                    <asp:ListItem Value="1"></asp:ListItem>
+                                    <asp:ListItem>2</asp:ListItem>
+                                    <asp:ListItem>3</asp:ListItem>
+                                    <asp:ListItem>4</asp:ListItem>
+                                    <asp:ListItem>5</asp:ListItem>
+                                    <asp:ListItem>6</asp:ListItem>
+                                    <asp:ListItem>7</asp:ListItem>
+                                    <asp:ListItem>8</asp:ListItem>
+                                    <asp:ListItem>9</asp:ListItem>
+                                    <asp:ListItem>0</asp:ListItem>
+                                </asp:DropDownList>
+                            </td>
+                        </tr>
+                        <tr class="bg_eb2">
+                            <td class="r b">Password</td>
+                            <td id="td_pass" class="l" title="Password must have at least 6 characters, including at least 2 letters and at least 2 digits. (e.g:pass22)">
+                                <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" onkeyup="return checkpass(this,'td_pass');"></asp:TextBox>
+                            </td>
+                        </tr>
+                        <tr class="bg_eb2">
+                            <td class="r b">First Name</td>
+                            <td id="td_fname" class="l">
+                                <asp:TextBox ID="txtFname" runat="server"></asp:TextBox>
+                            </td>
+                        </tr>
+                        <tr class="bg_eb2"><td class="r b">Last Name</td>
+                            <td id="td_lname" class="l">
+                                <asp:TextBox ID="txtLname" runat="server"></asp:TextBox>
+                            </td>
+                        </tr>
+                        <tr class="bg_eb2"><td colspan="2" class="l b">* Account Permission</td>
+                        </tr>
+                        <tr class="bg_eb2">
+                            <td colspan="2" class="c" valign="middle">
+                                <asp:CheckBox ID="ckbviewTotalBets" runat="server" Text="Total Bets" /> &nbsp;
+                                <asp:CheckBox ID="ckbviewReports" runat="server" Text="Reports" /> &nbsp;
+                                <asp:CheckBox ID="ckbCreateAcc" runat="server" Text="Create Account" /> &nbsp;
+                                <asp:CheckBox ID="ckbUpdateAcc" runat="server" Text="Update Account" /> &nbsp;
+                                <asp:CheckBox ID="ckbTransfer" runat="server" Text="Transfer" /> &nbsp;
+                            </td>
+                        </tr>
+                        <tr class="bg_eb2">
+                            <td class="c" colspan="2">
+                                <asp:Button ID="btnApply" runat="server" Text="Add" CssClass="btn" />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <input type="hidden" value="Password must have at least 6 characters, including at least 2 letters and at least 2 digits. (e.g:pass22)" id="lblPasswordRequire" />
+        <input id="alertPasswordEmpty" name="alertPasswordEmpty" type="hidden" value="Sorry, password can not be empty!!!" />
+        <input id="alertPasswordRequire" name="alertPasswordRequire" type="hidden" value="Password must have at least 6 characters, including at least 2 letters and at least 2 digits. (e.g:pass22)" />
+    </div>
+    </form>
 </body>
 </html>
