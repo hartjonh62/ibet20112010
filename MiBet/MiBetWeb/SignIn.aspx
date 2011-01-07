@@ -104,14 +104,14 @@
             <tr>
                 <td><span id="username" style="font-weight:bold;">Username</span></td>
                 <td colspan="2">
-                    <input class="tb" onkeypress="onExcLogin(event);" id="txtusername" name="txtusername" type="text" />
-
+                    <asp:TextBox class="tb" onkeypress="onExcLogin(event);" ID="txtUserName" runat="server"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td><span id="password" style="font-weight:bold;">Password</span></td>
                 <td colspan="2">
-                    <input class="tb" onkeypress="onExcLogin(event);" id="txtpassword" name="txtpassword" type="password" />
+                    <asp:TextBox class="tb" TextMode="Password" onkeypress="onExcLogin(event);" ID="txtPassword" runat="server"></asp:TextBox>
+                    
                 </td>
             </tr>
 
@@ -119,7 +119,8 @@
                 <td onclick="GetValidateImage()">
                     <img id="validatecode" alt="" src="Authorization/LoginCaptcha.ashx" style="width:65px; height:28px;" /></td>
                 <td colspan="2">
-                    <input class="tb" onkeypress="onExcLogin(event);" id="txtcaptcha" name="txtcaptcha" type="text" maxlength="4" autocomplete="off" />
+                    <asp:TextBox class="tb" onkeypress="onExcLogin(event);" maxlength="4" autocomplete="off"  ID="txtCaptcha" runat="server"></asp:TextBox>
+                    
                 </td>
             </tr>
             <tr>
