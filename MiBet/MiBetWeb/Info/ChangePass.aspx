@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="ChangePass.aspx.cs" Inherits="Info_ChangePass" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="Info_ChangePass" Codebehind="ChangePass.aspx.cs" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
@@ -163,6 +163,146 @@ function PreSubmit(e)
 </script>
 </head>
 <body>
-<div id="page_main"><div id="header_main">Change Password</div><form style="position:absolute;"><table id="trMsg" style="display:none" width="370" class=""><tr><td><table id="tbl1" align="left" cellspacing="0" cellpadding="0" border="0" style="display: {ErrDisplay}"><tr class=""><td class="l" style="width: 380px"><table border="0" cellpadding="0" cellspacing="0" width="100%" id="diverrmsg"><tr><td id="1_1" class="emsg_1_1">&nbsp;</td><td id="1_2" class="emsg_1_2">&nbsp;</td><td id="1_3" class="emsg_1_3">&nbsp;</td></tr><tr><td id="2_1" valign="top" class="emsg_2_1">&nbsp;</td><td valign="top" style="padding-left:30px;" id="spmsgerr" class="msgerr">{Message-Error}</td><td id="2_2" class="emsg_2_2">&nbsp;</td></tr><tr><td id="3_1" class="emsg_3_1">&nbsp;</td><td id="3_2" class="emsg_3_2">&nbsp;</td><td id="3_3" class="emsg_3_3">&nbsp;</td></tr></table></td></tr></table><table id="tbl2" align="left" cellspacing="0" cellpadding="0" border="0" style="display: none"><tr class=""><td class="l" style="width: 380px"><table border="0" cellpadding="0" cellspacing="0" width="100%" id="Table1"><tr><td class="emsg_1_1">&nbsp;</td><td class="emsg_1_2">&nbsp;</td><td class="emsg_1_3">&nbsp;</td></tr><tr><td valign="top" class="emsg_2_1">&nbsp;</td><td valign="top" id="Td1" class="msgerr">{Message}</td><td class="emsg_2_2">&nbsp;</td></tr><tr><td class="emsg_3_1">&nbsp;</td><td class="emsg_3_2">&nbsp;</td><td class="emsg_3_3">&nbsp;</td></tr></table></td></tr></table></td></tr></table><table width="370" border="0" cellpadding="0" cellspacing="1" onkeyup="PreSubmit(event)" class="tblRpt"><tr><td colspan="2" class="RptHeader bg_eb">Change Password</td></tr><tr class="bg_eb"><td >Old Password</td><td class="red l"><input name="OldPassword" type="password" id="OldPassword" size="20" style="width: 150px;"/></td></tr><tr class="bg_eb"><td >Password</td><td class="red l" title="Password must have at least 6 characters, including at least 2 letters and at least 2 digits. (e.g:pass22)" id="td_pass"><input name="NewPassword" type="password" id="NewPassword" size="20" onkeyup="checkpass(this,'td_pass');" style="width: 150px;"/></td></tr><tr class="bg_eb"><td>Confirm Password</td><td class="red l" title="Password must have at least 6 characters, including at least 2 letters and at least 2 digits. (e.g:pass22)" id="td_confirmpass"><input name="ConfirmPassword" type="password" id="ConfirmPassword" size="20" style="width: 150px;" onkeyup="checkpass(this,'td_confirmpass');" /></td></tr><tr><td class="bg_eb">&nbsp;</td><td class="bg_eb red l"><input type="button" value="Submit" onclick="ExcSubmit();" id="btnSubmit" class="btn" style="width:55px"/>&nbsp;<input type="reset" value="Reset" onclick="ExcReset();" id="btnReset" class="btn" /></tr></table></form></div><input id="alertInputOldPwd" name="alertInputOldPwd" type="hidden" value="Please Enter Old Password!!!" /><input id="alertPasswordEmpty" name="alertPasswordEmpty" type="hidden" value="Sorry, password can not be empty!!!" /><input id="alertErrorConfirm" name="alertErrorConfirm" type="hidden" value="The password was not correctly confirmed." /><input id="alertPasswordRequire" name="alertPasswordRequire" type="hidden" value="Password must have at least 6 characters, including at least 2 letters and at least 2 digits. (e.g:pass22)" /><input id="alertPasswordSucc" name="alertPasswordSucc" type="hidden" value="Password Changed!" />
+    <form id="form1" runat="server">
+    <div id="page_main">
+        <div id="header_main">
+            Change Password</div>
+        <table id="trMsg" style="display: none" width="370" class="">
+            <tr>
+                <td>
+                    <table id="tbl1" align="left" cellspacing="0" cellpadding="0" border="0" style="display: {ErrDisplay}">
+                        <tr class="">
+                            <td class="l" style="width: 380px">
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%" id="diverrmsg">
+                                    <tr>
+                                        <td id="1_1" class="emsg_1_1">
+                                            &nbsp;
+                                        </td>
+                                        <td id="1_2" class="emsg_1_2">
+                                            &nbsp;
+                                        </td>
+                                        <td id="1_3" class="emsg_1_3">
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td id="2_1" valign="top" class="emsg_2_1">
+                                            &nbsp;
+                                        </td>
+                                        <td valign="top" style="padding-left: 30px;" id="spmsgerr" class="msgerr">
+                                            {Message-Error}
+                                        </td>
+                                        <td id="2_2" class="emsg_2_2">
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td id="3_1" class="emsg_3_1">
+                                            &nbsp;
+                                        </td>
+                                        <td id="3_2" class="emsg_3_2">
+                                            &nbsp;
+                                        </td>
+                                        <td id="3_3" class="emsg_3_3">
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table id="tbl2" align="left" cellspacing="0" cellpadding="0" border="0" style="display: none">
+                        <tr class="">
+                            <td class="l" style="width: 380px">
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%" id="Table1">
+                                    <tr>
+                                        <td class="emsg_1_1">
+                                            &nbsp;
+                                        </td>
+                                        <td class="emsg_1_2">
+                                            &nbsp;
+                                        </td>
+                                        <td class="emsg_1_3">
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" class="emsg_2_1">
+                                            &nbsp;
+                                        </td>
+                                        <td valign="top" id="Td1" class="msgerr">
+                                            {Message}
+                                        </td>
+                                        <td class="emsg_2_2">
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="emsg_3_1">
+                                            &nbsp;
+                                        </td>
+                                        <td class="emsg_3_2">
+                                            &nbsp;
+                                        </td>
+                                        <td class="emsg_3_3">
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table width="370" border="0" cellpadding="0" cellspacing="1" onkeyup="PreSubmit(event)"
+            class="tblRpt">
+            <tr>
+                <td colspan="2" class="RptHeader bg_eb">
+                    Change Password
+                </td>
+            </tr>
+            <tr class="bg_eb">
+                <td>
+                    Old Password
+                </td>
+                <td class="red l">
+                    <asp:TextBox ID="txtOldPassword" runat="server" Width="150" TextMode="Password"></asp:TextBox>
+                </td>
+            </tr>
+            <tr class="bg_eb">
+                <td>
+                    Password
+                </td>
+                <td class="red l" title="Password must have at least 6 characters, including at least 2 letters and at least 2 digits. (e.g:pass22)"
+                    id="td_pass">
+                    <asp:TextBox ID="txtNewPassword" runat="server" onkeyup="checkpass(this,'td_pass');" Width="150" TextMode="Password"></asp:TextBox>
+                </td>
+            </tr>
+            <tr class="bg_eb">
+                <td>
+                    Confirm Password
+                </td>
+                <td class="red l" title="Password must have at least 6 characters, including at least 2 letters and at least 2 digits. (e.g:pass22)"
+                    id="td_confirmpass">
+                    <asp:TextBox ID="txtConfirmPassword" runat="server" TextMode="Password" Width="150" onkeyup="checkpass(this,'td_confirmpass');"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="bg_eb">
+                    &nbsp;
+                </td>
+                <td class="bg_eb red l">
+                    <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClientClick="ExcSubmit();" CssClass="btn" />
+                    <asp:Button ID="btnReset" runat="server" Text="Reset" OnClientClick="ExcReset();" CssClass="btn" />
+            </tr>
+        </table>
+    </div>
+    <input id="alertInputOldPwd" name="alertInputOldPwd" type="hidden" value="Please Enter Old Password!!!" /><input
+        id="alertPasswordEmpty" name="alertPasswordEmpty" type="hidden" value="Sorry, password can not be empty!!!" /><input
+            id="alertErrorConfirm" name="alertErrorConfirm" type="hidden" value="The password was not correctly confirmed." /><input
+                id="alertPasswordRequire" name="alertPasswordRequire" type="hidden" value="Password must have at least 6 characters, including at least 2 letters and at least 2 digits. (e.g:pass22)" /><input
+                    id="alertPasswordSucc" name="alertPasswordSucc" type="hidden" value="Password Changed!" />
+    </form>
 </body>
 </html>

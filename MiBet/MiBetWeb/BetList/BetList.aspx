@@ -109,7 +109,65 @@
 </script>
 </head>
 <body>
-<div class='sContent'><form method="post"><div id="page_main"><table id="tbl1" border="0" cellspacing="0" cellpadding="0" class="{hide}" width="99%"><tr><td style="text-align: left; white-space: nowrap; width: 50%;"><div id="header_main" style="position: relative; left: -2px;"><b>Mix Parlay </b></div></td><td align="right" style="width: 45%;"><div style="text-align: right;"><input type="image" id="exporttoexcel" name="exporttoexcel" alt="Export to Excel" nofocus="true" src="../App_Themes/AgencyV2/Images/excel.gif" title="Export to Excel" class="hand" /></div></td></tr></table><table id="tbl2" border="0" cellpadding="0" cellspacing="1" style="display: none; margin-bottom: 10px; width: 99%" class="tblRpt"><tr class="RptHeader"><td style="width: 20px;">#</td><td style="width: 90px;">Member</td><td style="width: 130px;">Trans.Time</td><td>Choice</td><td style="width: 50px;">Odds</td><td style="width: 50px;">Stake</td><td style="width: 85px;">Status</td><td style="width: 70px;">MasterPT/<br>Comm</td><td style="width: 70px;">AgentPT/<br>Comm</td></tr><tr><td colspan="12" class="bg_white c">No information is available</td></tr></table></form></div>
+    <div class='sContent'>
+        <form method="post">
+        <div id="page_main">
+            <table id="tbl1" border="0" cellspacing="0" cellpadding="0" class="{hide}" width="99%">
+                <tr>
+                    <td style="text-align: left; white-space: nowrap; width: 50%;">
+                        <div id="header_main" style="position: relative; left: -2px;">
+                            <b>Mix Parlay </b>
+                        </div>
+                    </td>
+                    <td align="right" style="width: 45%;">
+                        <div style="text-align: right;">
+                            <input type="image" id="exporttoexcel" name="exporttoexcel" alt="Export to Excel" nofocus="true" src="../App_Themes/AgencyV2/Images/excel.gif" title="Export to Excel"
+                                class="hand" />
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <table id="tbl2" border="0" cellpadding="0" cellspacing="1" style="display: none;
+                margin-bottom: 10px; width: 99%" class="tblRpt">
+                <tr class="RptHeader">
+                    <td style="width: 20px;">
+                        #
+                    </td>
+                    <td style="width: 90px;">
+                        Member
+                    </td>
+                    <td style="width: 130px;">
+                        Trans.Time
+                    </td>
+                    <td>
+                        Choice
+                    </td>
+                    <td style="width: 50px;">
+                        Odds
+                    </td>
+                    <td style="width: 50px;">
+                        Stake
+                    </td>
+                    <td style="width: 85px;">
+                        Status
+                    </td>
+                    <td style="width: 70px;">
+                        MasterPT/<br />
+                        Comm
+                    </td>
+                    <td style="width: 70px;">
+                        AgentPT/<br />
+                        Comm
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="12" class="bg_white c">
+                        No information is available
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
 
 </body>
 </html>
