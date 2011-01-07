@@ -1,9 +1,0 @@
-D:\Thien Nam\iBet\MiBet\MiBetBusiness\bin\Debug\MiBetBusiness.dll
-D:\Thien Nam\iBet\MiBet\MiBetBusiness\bin\Debug\MiBetBusiness.pdb
-D:\Thien Nam\iBet\MiBet\MiBetBusiness\obj\Debug\ResolveAssemblyReference.cache
-D:\Thien Nam\iBet\MiBet\MiBetBusiness\obj\Debug\MiBetBusiness.dll
-D:\Thien Nam\iBet\MiBet\MiBetBusiness\obj\Debug\MiBetBusiness.pdb
-D:\Thien Nam\iBet\MiBet\MiBetBusiness\bin\Debug\MiBetCommon.dll
-D:\Thien Nam\iBet\MiBet\MiBetBusiness\bin\Debug\MiBetDataAccess.dll
-D:\Thien Nam\iBet\MiBet\MiBetBusiness\bin\Debug\MiBetCommon.pdb
-D:\Thien Nam\iBet\MiBet\MiBetBusiness\bin\Debug\MiBetDataAccess.pdb

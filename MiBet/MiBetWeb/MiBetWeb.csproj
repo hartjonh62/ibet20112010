@@ -365,6 +365,9 @@
       <DependentUpon>BetList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="BetList\BetList.aspx.designer.cs">
+      <DependentUpon>BetList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="BetList\BetSlip.aspx.cs">
       <DependentUpon>BetSlip.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -424,6 +427,9 @@
     <Compile Include="MemberInfo\AddEditFinancial.aspx.cs">
       <DependentUpon>AddEditFinancial.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MemberInfo\AddEditFinancial.aspx.designer.cs">
+      <DependentUpon>AddEditFinancial.aspx</DependentUpon>
     </Compile>
     <Compile Include="MemberInfo\AddEditHorseRacing.aspx.cs">
       <DependentUpon>AddEditHorseRacing.aspx</DependentUpon>
