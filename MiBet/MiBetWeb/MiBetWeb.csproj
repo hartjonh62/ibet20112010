@@ -538,57 +538,99 @@
       <DependentUpon>CancelBetList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Report\CancelBetList.aspx.designer.cs">
+      <DependentUpon>CancelBetList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Report\CommissionByBettype.aspx.cs">
       <DependentUpon>CommissionByBettype.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\CommissionByBettype.aspx.designer.cs">
+      <DependentUpon>CommissionByBettype.aspx</DependentUpon>
     </Compile>
     <Compile Include="Report\CommissionByFinance.aspx.cs">
       <DependentUpon>CommissionByFinance.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Report\CommissionByFinance.aspx.designer.cs">
+      <DependentUpon>CommissionByFinance.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Report\MatchResultEntered.aspx.cs">
       <DependentUpon>MatchResultEntered.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\MatchResultEntered.aspx.designer.cs">
+      <DependentUpon>MatchResultEntered.aspx</DependentUpon>
     </Compile>
     <Compile Include="Report\MatchWinLossDetail.aspx.cs">
       <DependentUpon>MatchWinLossDetail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Report\MatchWinLossDetail.aspx.designer.cs">
+      <DependentUpon>MatchWinLossDetail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Report\MemberMiscInfo.aspx.cs">
       <DependentUpon>MemberMiscInfo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\MemberMiscInfo.aspx.designer.cs">
+      <DependentUpon>MemberMiscInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Report\OutstandingAgentDetail.aspx.cs">
       <DependentUpon>OutstandingAgentDetail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Report\OutstandingAgentDetail.aspx.designer.cs">
+      <DependentUpon>OutstandingAgentDetail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Report\Result.aspx.cs">
       <DependentUpon>Result.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\Result.aspx.designer.cs">
+      <DependentUpon>Result.aspx</DependentUpon>
     </Compile>
     <Compile Include="Report\RptCommissionHR.aspx.cs">
       <DependentUpon>RptCommissionHR.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Report\RptCommissionHR.aspx.designer.cs">
+      <DependentUpon>RptCommissionHR.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Report\Statement.aspx.cs">
       <DependentUpon>Statement.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\Statement.aspx.designer.cs">
+      <DependentUpon>Statement.aspx</DependentUpon>
     </Compile>
     <Compile Include="Report\WinLossByBettype.aspx.cs">
       <DependentUpon>WinLossByBettype.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Report\WinLossByBettype.aspx.designer.cs">
+      <DependentUpon>WinLossByBettype.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Report\WinlossCasino.aspx.cs">
       <DependentUpon>WinlossCasino.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\WinlossCasino.aspx.designer.cs">
+      <DependentUpon>WinlossCasino.aspx</DependentUpon>
     </Compile>
     <Compile Include="Report\WinLossDetailMaster.aspx.cs">
       <DependentUpon>WinLossDetailMaster.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Report\WinLossDetailMaster.aspx.designer.cs">
+      <DependentUpon>WinLossDetailMaster.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Report\WinLossDetailSuper.aspx.cs">
       <DependentUpon>WinLossDetailSuper.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\WinLossDetailSuper.aspx.designer.cs">
+      <DependentUpon>WinLossDetailSuper.aspx</DependentUpon>
     </Compile>
     <Compile Include="SignIn.aspx.cs">
       <DependentUpon>SignIn.aspx</DependentUpon>
