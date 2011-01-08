@@ -340,6 +340,7 @@
                                                     View</a>
                                             </td>
                                             <td class="l">
+                                                <asp:Label ID="lblFirstName" runat="server"></asp:Label>
                                             </td>
                                             <td class="l">
                                             </td>
@@ -401,6 +402,7 @@
                                                     View</a>
                                             </td>
                                             <td class="l">
+                                                <asp:Label ID="firstName" runat="server"></asp:Label>
                                             </td>
                                             <td class="l">
                                             </td>
