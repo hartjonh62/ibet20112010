@@ -7,6 +7,6 @@ namespace MiBetBusiness
 {
     public static class clsBusinessGetUser
     {
-        public static 
+        //public static 
     }
 }
