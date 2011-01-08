@@ -57,58 +57,22 @@ public partial class MemberInfo_AddEditHorseRacing {
     protected global::System.Web.UI.WebControls.TextBox txtMaxPerMatch151;
     
     /// <summary>
-    /// ddllistMTOWin control.
+    /// ddllistM201OU control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.DropDownList ddllistMTOWin;
+    protected global::System.Web.UI.WebControls.DropDownList ddllistM201OU;
     
     /// <summary>
-    /// ddllistMTOPlace control.
+    /// ddllistS201OU control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.DropDownList ddllistMTOPlace;
-    
-    /// <summary>
-    /// ddllistSTOWin control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::System.Web.UI.WebControls.DropDownList ddllistSTOWin;
-    
-    /// <summary>
-    /// ddllistSTOPlace control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::System.Web.UI.WebControls.DropDownList ddllistSTOPlace;
-    
-    /// <summary>
-    /// listSTOPlace control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::System.Web.UI.WebControls.DropDownList listSTOPlace;
-    
-    /// <summary>
-    /// autoSTOPlace control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::System.Web.UI.WebControls.DropDownList autoSTOPlace;
+    protected global::System.Web.UI.WebControls.DropDownList ddllistS201OU;
     
     /// <summary>
     /// HyperLink1 control.
