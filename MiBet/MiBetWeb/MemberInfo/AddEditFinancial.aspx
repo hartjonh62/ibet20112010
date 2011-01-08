@@ -262,135 +262,164 @@ var alertLessthanMinPT='Master Preset and Super Preset must not be less than ';
                 <tr class="tblTitleCenter">
                     <td colspan="3">
                         Bet Setting
-                     Setting
                     </td>
                 </tr>
                 <tr class="bg_eb">
                     <td class="c tdPT1">
-                        Min Bet&nbsp;<asp:TextBox 
-                            ID="txtMinBet201" runat="server"></asp:TextBox>
+                        Min Bet&nbsp;<%--<input type="text" maxlength="14" id="txtMinbet201" name="txtMinbet201"
+                            value="5" />--%>
+                            <asp:TextBox ID="txtMinbet201" runat="server"></asp:TextBox>
                         <span class="minmaxbet">&gt;=<span id="txtMinbet_Min201">1</span></span>
                     </td>
                     <td class="c">
-                        <asp:Label ID="Label17" runat="server" Text="Max Bet"></asp:Label>
-                        &nbsp;<asp:TextBox 
-                            ID="txtMaxbet2001" runat="server"></asp:TextBox>
-                        <asp:Label ID="Label16" runat="server" Text="&lt;=300"></asp:Label>
-&nbsp;</td>
+                        Max Bet&nbsp;<%--<input type="text" maxlength="14" id="txtMaxbet201" name="txtMaxbet201"
+                            value="300" />--%><asp:TextBox ID="txtMaxbet201" runat="server"></asp:TextBox>
+                        <span class="minmaxbet">&lt;=<span id="txtMaxbet_Max201">300</span></span>
+                    </td>
                     <td class="c">
-                        <asp:Label ID="Label15" runat="server" Text="Max Per Match"></asp:Label>
-                        &nbsp;<span class="hidden">&gt;=<span id="txtMaxPerMatch_Min201">0</span>
-                                and</span><asp:TextBox ID="txtMaxPerMarch" runat="server"></asp:TextBox>
+                        Max Per Match&nbsp;<%--<input type="text" maxlength="14" id="txtMaxPerMatch201" name="txtMaxPerMatch201"
+                            value="12,000" />--%>
+                            <span class="hidden">&gt;=<span id="txtMaxPerMatch_Min201">0</span>
+                                and</span><asp:TextBox ID="txtMaxPerMatch201" runat="server"></asp:TextBox>
                         <span class="minmaxbet">&lt;=<span id="txtMaxPerMatch_Max201">12,000</span></span>
                     </td>
                 </tr>
             </table>
+           
+
             <div id="divUpdPT201" name="divUpdPT201" style="width: 850px;">
-                <table border="1" width="100%" class="tblRpt">
-                    <tr class="tblTitleCenter">
-                        <td colspan="5">
-                            Position Taking
-                        </td>
-                    </tr>
-                    <tr class="bg_eb {clssTr-text}">
-                        <td class="" style="width: 200px">
-                        </td>
-                        <td class="" style="width: 200px">
-                            <asp:Label ID="Label18" runat="server" Text="Over/Under"></asp:Label>
-                        </td>
-                        <td Odd/Even
-                        </td>
-                        <td class="" style="width: ">
-                        </td>
-                    </tr>
-                    <tr class="bg_eb {clssTr-text}">
-                        <td class="r" style="width: 200px">
-                            <asp:Label ID="Label14" runat="server" Text="Agent Position "></asp:Label>
+             <table border="1" width="100%" class="tblRpt">
+                <tr class="tblTitleCenter">
+                    <td colspan="6">
+                        Tote - Position Taking
+                    </td>
+                </tr>
+                <tr class="bg_eb {clssTr-text}">
+                    <td class="" style="width: 200px">
+                    </td>
+                    <td class="" style="width: 200px">
+                        Win
+                    </td>
+                    <td class="" style="width: 200px">
+                        Place
+                    </td>
+                    <td class="" style="width: ">
+                    </td>
+                </tr>
+                <tr class="bg_eb {clssTr-text}">
+                    <td class="r" style="width: 200px">
+                        Agent Position
+                    </td>
+                    <td class="c" style="width: 200px">
+                        <%--<select id="listMTOWin" name="listMTOWin" onchange="SelectOnChange('listMTOWin',10);">
+                            <option selected='true' value='0'>0</option>
+                        </select>--%>
+                        <asp:DropDownList ID="dlltxtMaxPerMatch201" runat="server">
+                        </asp:DropDownList>
+&nbsp;<a class="imaLink img" href="javascript:ReducePT('listMTOWin',10)"><img class="hand" hspace="1" id="Img3" name="btnReduce10" src="../App_Themes/AgencyV2/Images/b_sub.jpg" /></a><a
+                                class="imaLink img" href="javascript:IncreasePT('listMTOWin',10)"><img class="hand"
+                                    hspace="1" id="Img4" name="btnIncrease10" src="../App_Themes/AgencyV2/Images/b_add.jpg" /></a>
+                    </td>
+                    <td class="c" style="width: 200px">
+                        <%--<select id="listMTOPlace" name="listMTOPlace" onchange="SelectOnChange('listMTOPlace',10);">
+                            <option selected='true' value='0'>0</option>
+                        </select>--%>
+                        <asp:DropDownList ID="DropDownList1" runat="server" 
+                            DataSourceID="ddllistMTOPlace">
+                        </asp:DropDownList>
 &nbsp;</td>
-                        <td class="c" style="width: 200px">
-                            <asp:DropDownList ID="ddllistM201OU" runat="server">
-                            </asp:DropDownList>
-&nbsp;<a class="imaLink img" href="javascript:ReducePT('listM201OU',1)"><img class="hand" hspace="1" id="btnReduce1" name="btnReduce1" src="../App_Themes/AgencyV2/Images/b_down.jpg" /></a><a
-                                    class="imaLink img" href="javascript:IncreasePT('listM201OU',1)"><img class="hand"
-                                        hspace="1" id="btnIncrease1" name="btnIncrease1" src="../App_Themes/AgencyV2/Images/b_up.jpg" /></a><a
-                                            class="imaLink img" href="javascript:ReducePT('listM201OU',10)"><img class="hand"
-                                                hspace="1" id="btnReduce10" name="btnReduce10" src="../App_Themes/AgencyV2/Images/b_sub.jpg" /></a><a
-                                                    class="imaLink img" href="javascript:IncreasePT('listM201OU',10)"><img class="hand"
-                                                        hspace="1" id="btnIncrease10" name="btnIncrease10" src="../App_Themes/AgencyV2/Images/b_add.jpg" /></a>
-                        </td>
-                        <td class="c" style="width: 200px">
-                            <asp:DropDownList ID="ddllistM201OE" runat="server">
-                            </asp:DropDownList>
+                    <td class="" style="width: 200px">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr class="bg_eb {clssTr-text}">
+                    <td class="r" style="width: 200px">
+                        Master Preset
+                    </td>
+                    <td class="c" style="width: 200px">
+                        <%--<select id="listSTOWin" name="listSTOWin" onchange="SelectOnChange('listSTOWin',10);">
+                            <option selected='true' value='0'>0</option>
+                        </select>--%>
+                        <asp:DropDownList ID="ddllistSTOWin" runat="server">
+                        </asp:DropDownList>
+&nbsp;<a class="imaLink img" href="javascript:ReducePT('listSTOWin',10)"><img class="hand" hspace="1" id="Img3" name="btnReduce10" src="../App_Themes/AgencyV2/Images/b_sub.jpg" /></a><a
+                                class="imaLink img" href="javascript:IncreasePT('listSTOWin',10)"><img class="hand"
+                                    hspace="1" id="Img4" name="btnIncrease10" src="../App_Themes/AgencyV2/Images/b_add.jpg" /></a>
+                    </td>
+                    <td class="c" style="width: 200px">
+                        <%--<select id="listSTOPlace" name="listSTOPlace" onchange="SelectOnChange('listSTOPlace',10);">
+                            <option selected='true' value='0'>0</option>
+                        </select>--%>
+                        <asp:DropDownList ID="ddllistSTOPlace" runat="server">
+                        </asp:DropDownList>
 &nbsp;</td>
-                        <td class="" style="width: 200px">
-                            &nbsp;
-                        </td>
-                    </tr>
-                    <tr class="bg_eb {clssTr-text}">
-                        <td class="r" style="width: 200px">
-                            <asp:Label ID="Label13" runat="server" Text="Master Preset"></asp:Label>
+                    <td class="" style="width: 200px">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr class="bg_eb {clssTr-text}">
+                    <td rowspan="2" class="r">
+                        Auto Master Preset
+                    </td>
+                    <td class="c" style="width: 200px">
+                        <input type="checkbox" onclick="CheckAutoPreset(this,null,10)" id="chkAutoTOWin"
+                            name="chkAutoTOWin" />
+                    </td>
+                    <td class="c" style="width: 200px">
+                        <input type="checkbox" onclick="CheckAutoPreset(this,null,10)" id="chkAutoTOPlace"
+                            name="chkAutoTOPlace" />
+                    </td>
+                    <td class="" style="width: 200px">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr class="bg_eb {clssTr-text}">
+                    <td class="{clss-text}" style="width: {width}">
+                        <%--<select id="autoSTOWin" name="autoSTOWin" onchange="SelectOnChange('autoSTOWin',10);"
+                            disabled>
+                            <option selected='true' value='0'>0</option>
+                        </select>--%>
+                        <asp:DropDownList ID="autoSTOWin" runat="server">
+                        </asp:DropDownList>
+&nbsp;<a class="imaLink img" href="javascript:ReducePT('autoSTOWin',10)"><img class="hand" hspace="1" id="Img3" name="btnReduce10" src="../App_Themes/AgencyV2/Images/b_sub.jpg" /></a><a
+                                class="imaLink img" href="javascript:IncreasePT('autoSTOWin',10)"><img class="hand"
+                                    hspace="1" id="Img4" name="btnIncrease10" src="../App_Themes/AgencyV2/Images/b_add.jpg" /></a>
+                    </td>
+                    <td class="{clss-text}" style="width: {width}">
+                        <%--<select id="autoSTOPlace" name="autoSTOPlace" onchange="SelectOnChange('autoSTOPlace',10);"
+                            disabled>
+                            <option selected='true' value='0'>0</option>
+                        </select>--%>
+                        <asp:DropDownList ID="ddlautoSTOPlace" runat="server">
+                        </asp:DropDownList>
 &nbsp;</td>
-                        <td class="c" style="width: 200px">
-                            <asp:DropDownList ID="ddllistS201OU" runat="server">
-                            </asp:DropDownList>
-&nbsp;<a class="imaLink img" href="javascript:ReducePT('listS201OU',1)"><img class="hand" hspace="1" id="btnReduce1" name="btnReduce1" src="../App_Themes/AgencyV2/Images/b_down.jpg" /></a><a
-                                    class="imaLink img" href="javascript:IncreasePT('listS201OU',1)"><img class="hand"
-                                        hspace="1" id="btnIncrease1" name="btnIncrease1" src="../App_Themes/AgencyV2/Images/b_up.jpg" /></a><a
-                                            class="imaLink img" href="javascript:ReducePT('listS201OU',10)"><img class="hand"
-                                                hspace="1" id="btnReduce10" name="btnReduce10" src="../App_Themes/AgencyV2/Images/b_sub.jpg" /></a><a
-                                                    class="imaLink img" href="javascript:IncreasePT('listS201OU',10)"><img class="hand"
-                                                        hspace="1" id="btnIncrease10" name="btnIncrease10" src="../App_Themes/AgencyV2/Images/b_add.jpg" /></a>
-                        </td>
-                        <td class="c" style="width: 200px">
-                            <asp:DropDownList ID="ddllistS201OE" runat="server">
-                            </asp:DropDownList>
-&nbsp;</td>
-                        <td class="" style="width: 200px">
-                            &nbsp;
-                        </td>
-                    </tr>
-                    <tr class="bg_eb {clssTr-text}">
-                        <td rowspan="2" class="r">
-                            <asp:Label ID="Label12" runat="server" Text="Auto Master Preset "></asp:Label>
-&nbsp;</td>
-                        <td class="c" style="width: 200px">
-                            <asp:CheckBox ID="chkAuto201OU" runat="server" />
-&nbsp;</td>
-                        <td class="c" style="width: 200px">
-                            <asp:CheckBox ID="CheckBox1" runat="server" />
-                            <asp:DropDownList ID="ddlautoS201OU" runat="server">
-                            </asp:DropDownList>
-&nbsp;<a class="imaLink img" href="javascript:ReducePT('autoS201OU',1)"><img class="hand" hspace="1" id="btnReduce1" name="btnReduce1" src="../App_Themes/AgencyV2/Images/b_down.jpg" /></a><a
-                                    class="imaLink img" href="javascript:IncreasePT('autoS201OU',1)"><img class="hand"
-                                        hspace="1" id="btnIncrease1" name="btnIncrease1" src="../App_Themes/AgencyV2/Images/b_up.jpg" /></a><a
-                                            class="imaLink img" href="javascript:ReducePT('autoS201OU',10)"><img class="hand"
-                                                hspace="1" id="btnReduce10" name="btnReduce10" src="../App_Themes/AgencyV2/Images/b_sub.jpg" /></a><a
-                                                    class="imaLink img" href="javascript:IncreasePT('autoS201OU',10)"><img class="hand"
-                                                        hspace="1" id="btnIncrease10" name="btnIncrease10" src="../App_Themes/AgencyV2/Images/b_add.jpg" /></a>
-                        </td>
-                        <td class="{clss-text" style="width: width}">
-                            <asp:DropDownList ID="ddlautoS201OE" runat="server">
-                            </asp:DropDownList>
-&nbsp;</td>
-                        <td class="" style="width: {width}">
-                            &nbsp;
-                        </td>
-                    </tr>
-                    <tr class="bg_eb {clssTr-text}">
-                        <td class="r" style="width: {width}">
-                        </td>
-                        <td colspan="3" class="l">
-                            <asp:CheckBox ID="chkCopy201OU" runat="server" />
-&nbsp;Copy From Over/Under
-                        </td>
-                    </tr>
-                </table>
+                    <td class="" style="width: {width}">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr class="bg_eb {clssTr-text}">
+                    <td class="r" style="width: width">
+                    </td>
+                    <td colspan="3" class="l">
+                        <input type="checkbox" id="chkCopyTOWin" name="chkCopyTOWin" onclick="CheckCopyPT(this,arrSuper151TO,arrMaster151TO,'chkAuto151TO');" />
+                        Copy From Win
+                    </td>
+                </tr>
+                <tr class="bg_eb {clssTr-text}">
+                    <td class="r" style="width: {width}">
+                    </td>
+                    <td colspan="3" class="CopyPreset">
+                        <input type="checkbox" id="chkCopyTOPreset" checked name="chkCopyTOPreset" />
+                        Apply Master Preset PT to all members
+                    </td>
+                </tr>
+            </table>
             </div>
         </div>
         <div class="b_add">
             <li>
                 <asp:LinkButton ID="btnSubmit" runat="server"><span>Submit</span></asp:LinkButton>
-           <%-- <a id="" onclick="BtnOnClick();" href="javascript:;"><span>Submitit" onclick="BtnOnClick();"
+                <%-- <a id="" onclick="BtnOnClick();" href="javascript:;"><span>Submitit" onclick="BtnOnClick();"
                 href="javascript:;"></a>--%>
                 
                 
