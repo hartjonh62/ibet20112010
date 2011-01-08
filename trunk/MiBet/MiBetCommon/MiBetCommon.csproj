@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -53,10 +54,21 @@
     <Compile Include="MemberInfomation\clsUserCommission.cs" />
     <Compile Include="MemberInfomation\clsUserRight.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\clsLeague.cs" />
+    <Compile Include="Report\clsResults.cs" />
+    <Compile Include="Report\clsRpCancelledBet.cs" />
+    <Compile Include="Report\clsRpCommByBetType.cs" />
+    <Compile Include="Report\clsRpFinanceCommission.cs" />
+    <Compile Include="Report\clsRpHorseRacingComm.cs" />
+    <Compile Include="Report\clsRpMatchLoss.cs" />
+    <Compile Include="Report\clsRpMatchWinLoss.cs" />
+    <Compile Include="Report\clsRpMatchWinLossDetail.cs" />
+    <Compile Include="Report\clsRpOutstanding.cs" />
+    <Compile Include="Report\clsRpStatement.cs" />
+    <Compile Include="Report\clsRpWinLostByBetType.cs" />
+    <Compile Include="Report\clsRpWinLostDetail.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Report\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
