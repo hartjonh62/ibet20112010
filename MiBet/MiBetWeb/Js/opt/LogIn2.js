@@ -65,12 +65,12 @@ function SetValue(newLang, uname, pwd, log, brows)
 	$('login').value =log;
 	$('brows').innerHTML = brows;
 	
-	$('txtusername').focus();
+	$('txtUserName').focus();
 }
 
 function GetObjectMsg()
 {
-    var lang = parseInt($("select").value);
+    var lang = parseInt($("ddlLanguage").value);
     switch(lang)
     {
         case 1:
@@ -92,12 +92,12 @@ function GetObjectMsg()
 function ExcLogin()
 {
     var errObj = GetObjectMsg();
-    if($('txtusername').value=="")
+    if($('txtUserName').value=="")
     {        
         $("errmsg").innerHTML=errObj.errUserName;
         return false;
     } 
-    if($('txtpassword').value=="")
+    if($('txtPassword').value=="")
     {        
         $("errmsg").innerHTML=errObj.errUserName;
         return false;
@@ -117,7 +117,7 @@ function AlertMsg(msgerr)
 {             
     var err=msgerr.split(';');
     $("errmsg").innerHTML=err[0];   
-    $("txtusername").value=err[1];
+    $("txtUserName").value=err[1];
     document.getElementById('validatecode').src ='Authorization/LoginCaptcha.ashx?t=' + new Date();
     $('txtcaptcha').value = '';
     $('login').disabled = false;

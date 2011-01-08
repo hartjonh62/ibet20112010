@@ -82,7 +82,7 @@
 <body onload="loadedContent();$('txtusername').focus();">    
 <center>
     <div id="cpanel">        
-        <form method="post" name="fLogin" action="Authorization/ProcessBLogin.ashx">
+        <form id="form1" runat="server">
         <div id="errmsg" class="errmsg"></div>       
         <table style="position:relative; left:140px; top:25px; width:280px;" border="0" align="left" cellpadding="0" cellspacing="3">
             <tr>
@@ -123,16 +123,18 @@
                 </td>
             </tr>
             <tr>
-                <td></td>
+                <td ></td>
 
                 <td colspan="2">
-                    <asp:Button ID="btnLogin" class="buttonsite" OnClientClick="ExcLogin();" runat="server" Text="Login" />
+                    <asp:Button ID="btnLogin" class="buttonsite" OnClientClick=" return ExcLogin();;" 
+                        runat="server" Text="Login" onclick="btnLogin_Click" />
                 </td>
+                
             </tr>                       
         </table> 
         <div id="rowEmpty" style="height:20px;clear:both;display:none">&nbsp;</div>
         <input name="lang" type="hidden" id="lang" value=""/>              
-        </form>        
+        </form>
         <table border="0" cellspacing="0" cellpadding="0" style="position:relative; top:9px; clear:both; width:380px;">
             <tr valign="bottom" style="height:24px;">                
                 <td style="width:62%; text-align:right;" valign="bottom">
