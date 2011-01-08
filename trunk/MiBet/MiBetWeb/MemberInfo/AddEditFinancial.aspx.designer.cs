@@ -192,175 +192,85 @@ public partial class MemberInfo_AddEditFinancial {
     protected global::System.Web.UI.WebControls.DropDownList ddlFinanceComission;
     
     /// <summary>
-    /// txtMinBet201 control.
+    /// txtMinbet201 control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.TextBox txtMinBet201;
+    protected global::System.Web.UI.WebControls.TextBox txtMinbet201;
     
     /// <summary>
-    /// Label17 control.
+    /// txtMaxbet201 control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.Label Label17;
+    protected global::System.Web.UI.WebControls.TextBox txtMaxbet201;
     
     /// <summary>
-    /// txtMaxbet2001 control.
+    /// txtMaxPerMatch201 control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.TextBox txtMaxbet2001;
+    protected global::System.Web.UI.WebControls.TextBox txtMaxPerMatch201;
     
     /// <summary>
-    /// Label16 control.
+    /// dlltxtMaxPerMatch201 control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.Label Label16;
+    protected global::System.Web.UI.WebControls.DropDownList dlltxtMaxPerMatch201;
     
     /// <summary>
-    /// Label15 control.
+    /// DropDownList1 control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.Label Label15;
+    protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
     
     /// <summary>
-    /// txtMaxPerMarch control.
+    /// ddllistSTOWin control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.TextBox txtMaxPerMarch;
+    protected global::System.Web.UI.WebControls.DropDownList ddllistSTOWin;
     
     /// <summary>
-    /// Label18 control.
+    /// ddllistSTOPlace control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.Label Label18;
+    protected global::System.Web.UI.WebControls.DropDownList ddllistSTOPlace;
     
     /// <summary>
-    /// Label14 control.
+    /// autoSTOWin control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.Label Label14;
+    protected global::System.Web.UI.WebControls.DropDownList autoSTOWin;
     
     /// <summary>
-    /// ddllistM201OU control.
+    /// ddlautoSTOPlace control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.DropDownList ddllistM201OU;
-    
-    /// <summary>
-    /// ddllistM201OE control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::System.Web.UI.WebControls.DropDownList ddllistM201OE;
-    
-    /// <summary>
-    /// Label13 control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::System.Web.UI.WebControls.Label Label13;
-    
-    /// <summary>
-    /// ddllistS201OU control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::System.Web.UI.WebControls.DropDownList ddllistS201OU;
-    
-    /// <summary>
-    /// ddllistS201OE control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::System.Web.UI.WebControls.DropDownList ddllistS201OE;
-    
-    /// <summary>
-    /// Label12 control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::System.Web.UI.WebControls.Label Label12;
-    
-    /// <summary>
-    /// chkAuto201OU control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::System.Web.UI.WebControls.CheckBox chkAuto201OU;
-    
-    /// <summary>
-    /// CheckBox1 control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::System.Web.UI.WebControls.CheckBox CheckBox1;
-    
-    /// <summary>
-    /// ddlautoS201OU control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::System.Web.UI.WebControls.DropDownList ddlautoS201OU;
-    
-    /// <summary>
-    /// ddlautoS201OE control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::System.Web.UI.WebControls.DropDownList ddlautoS201OE;
-    
-    /// <summary>
-    /// chkCopy201OU control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::System.Web.UI.WebControls.CheckBox chkCopy201OU;
+    protected global::System.Web.UI.WebControls.DropDownList ddlautoSTOPlace;
     
     /// <summary>
     /// btnSubmit control.
