@@ -683,6 +683,39 @@ namespace MiBetDataAccess.MemberInfomation
                 conn.CloseConn();
             }
         }
+        public Int64 Login(string username, string password)
+        {
+            try
+            {
+                clsAccount obj = new clsAccount();
+                SqlCommand com = new SqlCommand("iBet_tblAccounts_Login", conn.GetConn());
+                com.CommandType = System.Data.CommandType.StoredProcedure;
+                com.Parameters.AddWithValue("@UserName", username);
+                com.Parameters.AddWithValue("@Password", password);
+                conn.OpenConn();
+                SqlDataReader dr = com.ExecuteReader();
+                if (dr.Read())
+                {
+                    if (dr["ID"] != DBNull.Value)
+                    {
+                        return Convert.ToInt64(dr["ID"]);
+                    }
+                    else
+                    {
+                        return 0;
+                    }
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally { conn.CloseConn(); }
+        }
         public Int64 CheckUserName(string username)
         {
             try
