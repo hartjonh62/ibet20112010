@@ -5,6 +5,7 @@ using System.Text;
 using MiBetCommon.MemberInformation;
 using MiBetDataAccess.MemberInfomation;
 using MiBetDataAccess;
+using System.Web;
 namespace MiBetBusiness.MemberInfomation
 {
     public class clsBusinessAccount
@@ -138,6 +139,27 @@ namespace MiBetBusiness.MemberInfomation
             {
 
                 return 0;
+            }
+        }
+        public bool Login(string username,string password)
+        {
+            try
+            {
+                Int64 id=obj.Login(username, clsDataAccessMD5Password.ChangeMD5(password));
+                if (id != 0)
+                {
+                    HttpContext.Current.Session["UserId"] = id;
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+
+                return false;
             }
         }
         public void ResetPassword(Int64 id, string password)
