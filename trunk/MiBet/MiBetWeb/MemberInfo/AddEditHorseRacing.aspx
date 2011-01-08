@@ -136,8 +136,7 @@ var alertLessthanMinPT='Master Preset and Super Preset must not be less than ';
 </script></head>
 <body>
 <iframe name="UpdateFrm" id="UpdateFrm" style="display: none"></iframe>
-    <form action="../Handlers/UpdatePositionTaking_HR.ashx" method="post" id="form" name="form"
-    target="UpdateFrm">
+    <form id="form" runat="server">
     <div id="page_main">
         <div id="header_main">
             Edit Horse Racing SMQQ01</div>
@@ -244,9 +243,11 @@ var alertLessthanMinPT='Master Preset and Super Preset must not be less than ';
                         Tote Comm
                     </td>
                     <td class="l">
-                        <select class="selectcomm" style="width: 60px;" id="discount31" sel-dis31 name="discount31">
+                        <%--<select class="selectcomm" style="width: 60px;" id="discount31" sel-dis31 name="discount31">
                             <option selected='true'>0</option>
-                        </select>
+                        </select>--%>
+                        <asp:DropDownList ID="ddldiscount31" runat="server" CssClass="selectcomm">
+                        </asp:DropDownList>
                     </td>
                     <td class="r">
                     </td>
@@ -262,16 +263,22 @@ var alertLessthanMinPT='Master Preset and Super Preset must not be less than ';
                 </tr>
                 <tr class="bg_eb">
                     <td class="c tdPT1">
-                        Min Bet&nbsp;<input type="text" maxlength="14" id="txtMinbet151" name="txtMinbet151"
-                            value="0" /><span class="minmaxbet">&gt;=<span id="txtMinbet_Min151">10</span></span>
+                        Min Bet&nbsp;<%--<input type="text" maxlength="14" id="txtMinbet151" name="txtMinbet151"
+                            value="0" />--%>
+                            <asp:TextBox ID="txtMinbet151" runat="server"></asp:TextBox>
+                        <span class="minmaxbet">&gt;=<span id="txtMinbet_Min151">10</span></span>
                     </td>
                     <td class="c">
-                        Max Bet&nbsp;<input type="text" maxlength="14" id="txtMaxbet151" name="txtMaxbet151"
-                            value="0" /><span class="minmaxbet">&lt;=<span id="txtMaxbet_Max151">4,999</span></span>
+                        Max Bet&nbsp;<%--<input type="text" maxlength="14" id="txtMaxbet151" name="txtMaxbet151"
+                            value="0" />--%>
+                            <asp:TextBox ID="txtMaxbet151" runat="server">0</asp:TextBox>
+                        <span class="minmaxbet">&lt;=<span id="txtMaxbet_Max151">4,999</span></span>
                     </td>
                     <td class="c">
-                        Max Per Match&nbsp;<input type="text" maxlength="14" id="txtMaxPerMatch151" name="txtMaxPerMatch151"
-                            value="0" /><span class="hidden">&gt;=<span id="txtMaxPerMatch_Min151"></span> and</span><span
+                        Max Per Match&nbsp;<%--<input type="text" maxlength="14" id="txtMaxPerMatch151" name="txtMaxPerMatch151"
+                            value="0" />--%><span class="hidden">&gt;=<span id="txtMaxPerMatch_Min151"></span> and</span><asp:TextBox 
+                            ID="txtMaxPerMatch151" runat="server"></asp:TextBox>
+                        <span
                                 class="minmaxbet">&lt;=<span id="txtMaxPerMatch_Max151">20,000</span></span>
                     </td>
                 </tr>
@@ -300,18 +307,24 @@ var alertLessthanMinPT='Master Preset and Super Preset must not be less than ';
                             Agent Position
                         </td>
                         <td class="c" style="width: 200px">
-                            <select id="listMTOWin" name="listMTOWin" onchange="SelectOnChange('listMTOWin',10);">
+                            <%--<select id="listMTOWin" name="listMTOWin" onchange="SelectOnChange('listMTOWin',10);">
                                 <option selected='true' value='0'>0</option>
-                            </select>
+                            </select>--%>
+
+                            <asp:DropDownList ID="ddllistMTOWin" runat="server" >
+                            </asp:DropDownList>
+
                             <a class="imaLink img" href="javascript:ReducePT('listMTOWin',10)">
                                 <img class="hand" hspace="1" id="Img3" name="btnReduce10" src="../App_Themes/AgencyV2/Images/b_sub.jpg" /></a><a
                                     class="imaLink img" href="javascript:IncreasePT('listMTOWin',10)"><img class="hand"
                                         hspace="1" id="Img4" name="btnIncrease10" src="../App_Themes/AgencyV2/Images/b_add.jpg" /></a>
                         </td>
                         <td class="c" style="width: 200px">
-                            <select id="listMTOPlace" name="listMTOPlace" onchange="SelectOnChange('listMTOPlace',10);">
+                            <%--<select id="listMTOPlace" name="listMTOPlace" onchange="SelectOnChange('listMTOPlace',10);">
                                 <option selected='true' value='0'>0</option>
-                            </select>
+                            </select>--%>
+                            <asp:DropDownList ID="ddllistMTOPlace" runat="server">
+                            </asp:DropDownList>
                         </td>
                         <td class="" style="width: 200px">
                             &nbsp;
@@ -322,19 +335,22 @@ var alertLessthanMinPT='Master Preset and Super Preset must not be less than ';
                             Master Preset
                         </td>
                         <td class="c" style="width: 200px">
-                            <select id="listSTOWin" name="listSTOWin" onchange="SelectOnChange('listSTOWin',10);">
+                            <%--<select id="listSTOWin" name="listSTOWin" onchange="SelectOnChange('listSTOWin',10);">
                                 <option selected='true' value='0'>0</option>
-                            </select>
-                            <a class="imaLink img" href="javascript:ReducePT('listSTOWin',10)">
-                                <img class="hand" hspace="1" id="Img3" name="btnReduce10" src="../App_Themes/AgencyV2/Images/b_sub.jpg" /></a><a
+                            </select>--%>
+                            <asp:DropDownList ID="ddllistSTOWin" runat="server">
+                            </asp:DropDownList>
+&nbsp;<a class="imaLink img" href="javascript:ReducePT('listSTOWin',10)"><img class="hand" hspace="1" id="Img3" name="btnReduce10" src="../App_Themes/AgencyV2/Images/b_sub.jpg" /></a><a
                                     class="imaLink img" href="javascript:IncreasePT('listSTOWin',10)"><img class="hand"
                                         hspace="1" id="Img4" name="btnIncrease10" src="../App_Themes/AgencyV2/Images/b_add.jpg" /></a>
                         </td>
                         <td class="c" style="width: 200px">
-                            <select id="listSTOPlace" name="listSTOPlace" onchange="SelectOnChange('listSTOPlace',10);">
+                            <%--<select id="listSTOPlace" name="listSTOPlace" onchange="SelectOnChange('listSTOPlace',10);">
                                 <option selected='true' value='0'>0</option>
-                            </select>
-                        </td>
+                            </select>--%>
+                            <asp:DropDownList ID="ddllistSTOPlace" runat="server">
+                            </asp:DropDownList>
+&nbsp;</td>
                         <td class="" style="width: 200px">
                             &nbsp;
                         </td>
@@ -357,21 +373,24 @@ var alertLessthanMinPT='Master Preset and Super Preset must not be less than ';
                     </tr>
                     <tr class="bg_eb {clssTr-text}">
                         <td class="{clss-text}" style="width: width">
-                            <select id="autoSTOWin" name="autoSTOWin" onchange="SelectOnChange('autoSTOWin',10);"
+                            <%--<select id="listSTOPlace" name="autoSTOWin" onchange="SelectOnChange('autoSTOWin',10);"
                                 disabled>
                                 <option selected='true' value='0'>0</option>
-                            </select>
-                            <a class="imaLink img" href="javascript:ReducePT('autoSTOWin',10)">
-                                <img class="hand" hspace="1" id="Img3" name="btnReduce10" src="../App_Themes/AgencyV2/Images/b_sub.jpg" /></a><a
+                            </select>--%>
+                            <asp:DropDownList ID="listSTOPlace" runat="server" >
+                            </asp:DropDownList>
+&nbsp;<a class="imaLink img" href="javascript:ReducePT('autoSTOWin',10)"><img class="hand" hspace="1" id="Img3" name="btnReduce10" src="../App_Themes/AgencyV2/Images/b_sub.jpg" /></a><a
                                     class="imaLink img" href="javascript:IncreasePT('autoSTOWin',10)"><img class="hand"
                                         hspace="1" id="Img4" name="btnIncrease10" src="../App_Themes/AgencyV2/Images/b_add.jpg" /></a>
                         </td>
                         <td class="{clss-text}" style="width: width">
-                            <select id="autoSTOPlace" name="autoSTOPlace" onchange="SelectOnChange('autoSTOPlace',10);"
+                            <%--<select id="autoSTOPlace" name="autoSTOPlace" onchange="SelectOnChange('autoSTOPlace',10);"
                                 disabled>
                                 <option selected='true' value='0'>0</option>
-                            </select>
-                        </td>
+                            </select>--%>
+                            <asp:DropDownList ID="autoSTOPlace" runat="server" >
+                            </asp:DropDownList>
+&nbsp;</td>
                         <td class="" style="width: width">
                             &nbsp;
                         </td>
@@ -514,7 +533,11 @@ var alertLessthanMinPT='Master Preset and Super Preset must not be less than ';
             </div>
         </div>
         <div class="b_add">
-            <li><a id="btnSubmit" onclick="BtnOnClick();" href="javascript:;"><span>Submit</span></a></li></div>
+            <li><%--<a id="btnSubmit" onclick="BtnOnClick();" href="javascript:;"><span>Submit</span></a>--%>
+                <asp:HyperLink ID="HyperLink1" runat="server"><span>Submit</span></asp:HyperLink>
+            </li>
+
+        </div>
     </div>
     <br />
     <input type="hidden" id="hdDisabledHR" name="hdDisabledHR" value="0" /><input type="hidden"
@@ -548,5 +571,6 @@ var alertLessthanMinPT='Master Preset and Super Preset must not be less than ';
                                                                                                                     type="hidden" id="memberPT" name="memberPT" value="0" /><input type="hidden" id="maxMemberPT"
                                                                                                                         name="maxMemberPT" value="0" /><input type="hidden" id="saveControlDisabled" name="saveControlDisabled"
                                                                                                                             value="" /><input type="hidden" id="isUpdateMember" name="isUpdateMember" value="0" />
+    </form>
 </body>
 </html>

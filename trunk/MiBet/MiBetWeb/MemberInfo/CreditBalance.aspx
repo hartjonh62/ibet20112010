@@ -55,6 +55,7 @@
 </script>
 </head>
 <body>
+    <form id="form1" runat="server">
     <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
             <td>
@@ -70,8 +71,9 @@
                                     <span>&nbsp;User Name:</span>
                                 </td>
                                 <td id="tdfdatetext" style="padding-top: 6px" class="l">
-                                    <input type="text" name="txtUserName" id="txtUserName" style="font-size: 8pt; font-weight: normal;"
-                                        value="All" onkeypress="return KeyPress2(event);" onfocus="ClearAll()" onclick="ClearAll()" />
+                                    <%--  <input type="text" name="txtUserName" id="txtUserName" style="font-size: 8pt; font-weight: normal;"
+                                        value="All" onkeypress="return KeyPress2(event);" onfocus="ClearAll()" onclick="ClearAll()" />--%>
+                                    <asp:TextBox ID="txttxtUserName" runat="server">txtUserName</asp:TextBox>
                                 </td>
                                 <td style="padding-top: 6px">
                                 </td>
@@ -83,21 +85,29 @@
                                     <span>&nbsp;Status:</span>
                                 </td>
                                 <td style="padding-top: 6px; padding-bottom: 6px;">
-                                    <select style="width: 80px;" id="statusFilter" name="open" style="font-size: 8pt;
+                                   <%-- <select style="width: 80px;" id="statusFilter" name="open" style="font-size: 8pt;
                                         font-weight: normal;">
                                         <option value="0">All</option>
                                         <option value="1" selected='selected'>Open</option>
                                         <option value="2">Suspended</option>
                                         <option value="3">Closed</option>
                                         <option value="4">Disabled</option>
-                                    </select>
+                                    </select>--%>
+                                    <asp:DropDownList ID="đlstatusFilter" runat="server">
+                                        <asp:ListItem>All</asp:ListItem>
+                                        <asp:ListItem Selected="True">Open</asp:ListItem>
+                                        <asp:ListItem>Suppend</asp:ListItem>
+                                        <asp:ListItem>Closed</asp:ListItem>
+                                        <asp:ListItem>Disabled</asp:ListItem>
+                                    </asp:DropDownList>
                                 </td>
                                 <td style="padding-top: 6px; padding-bottom: 6px;">
-                                    <input id="dSubmit" type="button" value="Submit" class="btn" style="width: 55px;"
+                                    <%--<input id="dSubmit" type="button" value="Submit" class="btn" style="width: 55px;"
                                         style="width: 55px;" onclick="searchByUsername('CreditBalance.aspx','AgentList')"
-                                        onmouseout="this.className='btn';" onmouseover="this.className='btnhover';" />
+                                        onmouseout="this.className='btn';" onmouseover="this.className='btnhover';" />--%>
                                 </td>
                                 <td>
+                                    <asp:Button ID="dSubmit" runat="server" CssClass="btn" Text="Submit" />
                                     <div id="loading" style="float: right" class="fl">
                                     </div>
                                 </td>
@@ -357,5 +367,6 @@
             </tr>
         </table>
     </div>
+    </form>
 </body>
 </html>
