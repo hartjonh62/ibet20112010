@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="MiBet">
+</Property><Property Name="Solution File" Value="D:\Thien Nam\iBet\MiBet\MiBet\MiBet.sln">
+</Property><Property Name="User Options File" Value="D:\Thien Nam\iBet\MiBet\MiBet\MiBet.suo">
+</Property><Property Name="Date" Value="Monday, January 03, 2011">
+</Property><Property Name="Time" Value="16:36 PM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="MiBet.sln" Description="File successfully backed up as D:\Thien Nam\iBet\MiBet\MiBet\Backup\MiBet.sln">
+</Event><Event ErrorLevel="0" Project="" Source="MiBet.suo" Description="File successfully backed up as D:\Thien Nam\iBet\MiBet\MiBet\Backup\MiBet.suo">
+</Event><Event ErrorLevel="0" Project="" Source="MiBet.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="MiBet.sln" Description="Converted">
+</Event></UpgradeLog>

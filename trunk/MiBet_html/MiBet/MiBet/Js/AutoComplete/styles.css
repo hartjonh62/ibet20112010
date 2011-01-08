@@ -1,0 +1,27 @@
+﻿.output
+{
+	font-family:Arial;
+	font-size: 10pt;
+	color:black;
+	padding-left: 3px;
+	padding-top: 3px;
+	border: 1px solid #aaa;
+	width: 145px;
+	cursor: default;
+	background: #fff;
+}
+.shadow
+{
+	width:147px;
+	position:relative;
+	top: 2px;
+	left: 2px;
+	visibility: hidden;
+	cursor: default;
+	background: #ddd;
+}
+.shadow div{
+	position:relative;
+	top: -2px;
+	left: -2px;
+}
