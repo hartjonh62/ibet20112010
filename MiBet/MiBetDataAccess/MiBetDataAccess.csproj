@@ -34,7 +34,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,7 +44,32 @@
     <Reference Include="System.Web" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsDataAccessConnection.cs" />
+    <Compile Include="clsDataAccessMD5Password.cs" />
+    <Compile Include="MemberInfomation\clsDataAccessAccount.cs" />
+    <Compile Include="MemberInfomation\clsDataAccessBalance.cs" />
+    <Compile Include="MemberInfomation\clsDataAccessFunction.cs" />
+    <Compile Include="MemberInfomation\clsDataAccessMember.cs" />
+    <Compile Include="MemberInfomation\clsDataAccessModule.cs" />
+    <Compile Include="MemberInfomation\clsDataAccessSoccerBetSetting.cs" />
+    <Compile Include="MemberInfomation\clsDataAccessSoccerDeadBall.cs" />
+    <Compile Include="MemberInfomation\clsDataAccessSoccerLive.cs" />
+    <Compile Include="MemberInfomation\clsDataAccessUserCommission.cs" />
+    <Compile Include="MemberInfomation\clsDataAccessUserRight.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\clsDataAccessLeague.cs" />
+    <Compile Include="Report\clsDataAccessResults.cs" />
+    <Compile Include="Report\clsDataAccessRpCancelledBet.cs" />
+    <Compile Include="Report\clsDataAccessRpCommByBetType.cs" />
+    <Compile Include="Report\clsDataAccessRpFinanceCommission.cs" />
+    <Compile Include="Report\clsDataAccessRpHorseRacingComm.cs" />
+    <Compile Include="Report\clsDataAccessRpMatchLoss.cs" />
+    <Compile Include="Report\clsDataAccessRpMatchWinLoss.cs" />
+    <Compile Include="Report\clsDataAccessRpMatchWinLossDetail.cs" />
+    <Compile Include="Report\clsDataAccessRpOutstanding.cs" />
+    <Compile Include="Report\clsDataAccessRpStatement.cs" />
+    <Compile Include="Report\clsDataAccessRpWinLostByBetType.cs" />
+    <Compile Include="Report\clsDataAccessRpWinLostDetail.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MiBetCommon\MiBetCommon.csproj">
@@ -50,10 +77,7 @@
       <Name>MiBetCommon</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="MemberInfomation\" />
-    <Folder Include="Report\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
