@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "MiBet", "MiBet\", "{B0B9FB71-6293-4241-989C-9991D8493911}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFramework = "3.5"
+		Debug.AspNetCompiler.VirtualPath = "/MiBet"
+		Debug.AspNetCompiler.PhysicalPath = "D:\Du an i\30122009AdminiBet\MiBet\MiBet\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\MiBet\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/MiBet"
+		Release.AspNetCompiler.PhysicalPath = "D:\Du an i\30122009AdminiBet\MiBet\MiBet\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\MiBet\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "4300"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0B9FB71-6293-4241-989C-9991D8493911}.Debug|.NET.ActiveCfg = Debug|.NET
+		{B0B9FB71-6293-4241-989C-9991D8493911}.Debug|.NET.Build.0 = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
